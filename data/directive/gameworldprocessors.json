@@ -1,0 +1,4 @@
+{
+    "processors": ["RenderProcessor"],
+    "priorities": [15]
+}

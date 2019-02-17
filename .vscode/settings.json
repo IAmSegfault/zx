@@ -1,0 +1,7 @@
+{
+    "csproj.itemType": {
+        "*": "Content",
+        ".ts": "TypeScriptCompile",
+        ".cs": "Compile"
+    }
+}

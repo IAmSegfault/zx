@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{339DD268-6EBB-4E79-BC0D-9DE90C16EA70}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <RootNamespace>Zona</RootNamespace>
+    <AssemblyName>Zona</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tools|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TOOLS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <HintPath>$(ProjectDir)\.mono\assemblies\GodotSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Tools' ">
+      <HintPath>$(ProjectDir)\.mono\assemblies\GodotSharpEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="scripts\characterstatsblock.cs" />
+    <Compile Include="scripts\gamespace\map\GameMap.cs" />
+    <Compile Include="scripts\kernel\Ecs.cs" />
+    <Compile Include="Scripts\lib\Component.cs" />
+    <Compile Include="scripts\ecs\RenderProcessor.cs" />
+    <Compile Include="scripts\lib\Processor.cs" />
+    <Compile Include="scripts\kernel\gwk.cs" />
+    <Compile Include="scripts\ui\UiLog.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Cell.cs" />
+    <Compile Include="scripts\lib\RogueSharp\FieldOfView.cs" />
+    <Compile Include="scripts\lib\RogueSharp\GlobalSuppressions.cs" />
+    <Compile Include="scripts\lib\RogueSharp\GoalMap.cs" />
+    <Compile Include="scripts\lib\RogueSharp\IMap.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Map.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Path.cs" />
+    <Compile Include="scripts\lib\RogueSharp\PathFinder.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Point.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Rectangle.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\DotNetRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\GaussianRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\IRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\IWeightedPool.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\KnownSeriesRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\MinRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\MaxRandom.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\Singleton.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Random\WeightedPool.cs" />
+    <Compile Include="scripts\lib\RogueSharp\MapCreation\BorderOnlyMapCreationStrategy.cs" />
+    <Compile Include="scripts\lib\RogueSharp\MapCreation\CaveMapCreationStrategy.cs" />
+    <Compile Include="scripts\lib\RogueSharp\MapCreation\IMapCreationStrategy.cs" />
+    <Compile Include="scripts\lib\RogueSharp\MapCreation\RandomRoomsMapCreationStrategy.cs" />
+    <Compile Include="scripts\lib\RogueSharp\MapCreation\StringDeserializeMapCreationStrategy.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Exceptions\ImpossibleDieException.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Exceptions\InvalidChooseException.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Exceptions\InvalidMultiplicityException.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Terms\ConstantTerm.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Terms\DiceTerm.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Terms\IDiceExpressionTerm.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\Dice.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\DiceExpression.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\DiceParser.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\DiceResult.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\IDiceParser.cs" />
+    <Compile Include="scripts\lib\RogueSharp\DiceNotation\TermResult.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\DepthFirstPaths.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\DijkstraShortestPath.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\DirectedEdge.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\EdgeWeightedDigraph.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\Graph.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\IndexMinPriorityQueue.cs" />
+    <Compile Include="scripts\lib\RogueSharp\Algorithms\UnionFind.cs" />
+    <Compile Include="scripts\lib\RogueSharp\ICell.cs" />
+    <Compile Include="scripts\lib\RogueSharp\IGoalMap.cs" />
+    <Compile Include="scripts\lib\Entity.cs" />
+    <Compile Include="scripts\globals\Global.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
