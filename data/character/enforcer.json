@@ -1,6 +1,6 @@
 {
   "classname": "Enforcer",
-  "description": "A former agent of the law or soldier, the Enforcer has come to the Zone seeking riches.\n\nStarting HD: 1d6+2\n\nAttack value: 11\n\nSaving throw: 5",
+  "description": "[center]A former agent of the law or soldier, the Enforcer has come to the Zone seeking riches.[/center]\n\nStarting HD: 1d6+2\n\nAttack value: 11\n\nSaving throw: 5",
   "attributes":{
     "hitdice": ["1d6+2", "2d6+0", "3d6+0", "4d6+0", "5d6+0", "6d6+0", "7d6+0", "8d6+0", "9d6+0", "10d6+0"],
     "xp": [0, 2000, 4000, 8000, 16000, 32000, 64000, 128000, 256000, 512000],

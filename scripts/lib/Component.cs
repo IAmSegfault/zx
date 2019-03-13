@@ -1,26 +1,29 @@
 using System;
 using Godot;
 
-namespace Engine
+namespace Zona
 {
-    public class Component
+    namespace Engine
     {
-        private Entity _owner;
-        public Entity owner
+        public class Component
         {
-            get
+            private Entity _owner;
+            public Entity owner
             {
-                return this._owner;
-            }
+                get
+                {
+                    return this._owner;
+                }
 
-            set
+                set
+                {
+                    this._owner = value;
+                }
+            }
+            public virtual void init()
             {
-                this._owner = value;
-            }
-        }
-        public virtual void init()
-        {
 
+            }
         }
     }
 }

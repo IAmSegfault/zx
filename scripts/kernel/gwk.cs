@@ -41,13 +41,9 @@ namespace Engine
                     return false;
             }
         }
+
         public override void _Process(float delta)
         {        // Called every frame. Delta is time since last frame.        // Update game logic here.        
-            if (Input.IsActionJustPressed("fullscreen"))
-            {
-                Console.WriteLine("Window");
-                OS.WindowFullscreen = !OS.WindowFullscreen;
-            }
         }
     }
 }

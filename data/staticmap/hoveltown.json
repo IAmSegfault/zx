@@ -2,10 +2,9 @@
   "name": "Hoveltown",
   "position": {
     "random": false,
-    "random_chance": 1,
+    "random_chance": "1d20",
     "world_map_pos": [30, 63],
-    "superchunk_pos": [1, 1],
-    "chunk_pos": [3, 3]
+    "chunk_pos": [20, 63, 20]
     },
-  "file": "hoveltown.csv"
+  "file": "res://data/staticmap/hoveltown.csv"
 }

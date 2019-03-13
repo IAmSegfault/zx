@@ -54,8 +54,6 @@
     <Compile Include="scripts\characterstatsblock.cs" />
     <Compile Include="scripts\gamespace\map\GameMap.cs" />
     <Compile Include="scripts\kernel\Ecs.cs" />
-    <Compile Include="Scripts\lib\Component.cs" />
-    <Compile Include="scripts\ecs\RenderProcessor.cs" />
     <Compile Include="scripts\lib\Processor.cs" />
     <Compile Include="scripts\kernel\gwk.cs" />
     <Compile Include="scripts\ui\UiLog.cs" />
@@ -106,6 +104,22 @@
     <Compile Include="scripts\lib\RogueSharp\IGoalMap.cs" />
     <Compile Include="scripts\lib\Entity.cs" />
     <Compile Include="scripts\globals\Global.cs" />
+    <Compile Include="scripts\lib\map\LocalMap.cs" />
+    <Compile Include="scripts\lib\map\Vicinity.cs" />
+    <Compile Include="scripts\lib\EnumClass.cs" />
+    <Compile Include="scripts\lib\map\Position.cs" />
+    <Compile Include="scripts\lib\map\Chunk.cs" />
+    <Compile Include="scripts\lib\Component.cs" />
+    <Compile Include="scripts\lib\ecs\processors\RenderProcessor.cs" />
+    <Compile Include="scripts\lib\ecs\entities\Camera.cs" />
+    <Compile Include="scripts\lib\ecs\components\Viewport.cs" />
+    <Compile Include="scripts\lib\util\Csv.cs" />
+    <Compile Include="scripts\lib\ecs\entities\Player.cs" />
+    <Compile Include="scripts\lib\ecs\components\Position.cs" />
+    <Compile Include="scripts\lib\ecs\components\LightRadius.cs" />
+    <Compile Include="scripts\lib\util\enum\TileType.cs" />
+    <Compile Include="scripts\lib\node\INode.cs" />
+    <Compile Include="scripts\lib\node\ActorSprite.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

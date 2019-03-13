@@ -12,21 +12,23 @@ config_version=3
 
 config/name="Zona"
 run/main_scene="res://scenes/mainmenu.tscn"
+run/low_processor_mode=true
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 
 [autoload]
 
 Global="*res://scripts/globals/Global.cs"
+GlobalMusic="*res://scenes/globalmusic.tscn"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
-window/size/resizable=false
 window/dpi/allow_hidpi=true
+mouse_cursor/custom_image="res://assets/cursor2.png"
 window/stretch/mode="2d"
-window/stretch/aspect="expand"
+window/stretch/aspect="keep"
 window/stretch/shrink="1"
 
 [gui]
@@ -35,7 +37,7 @@ theme/use_hidpi=true
 
 [input]
 
-fullscreen=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":true,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
+fullscreen=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777255,"unicode":0,"echo":false,"script":null)
  ]
 
 [physics]

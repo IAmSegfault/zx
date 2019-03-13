@@ -19,19 +19,29 @@ func _ready():
 		#manifest.close()
 	else:
 		emit_signal("check_save")
+
+	var g = get_node("/root/Global")
+	if not g.isInit("mainmenu"):
+		var ms = get_node("/root/GlobalMusic/")
+		ms.play("midnight.wav", 1)
+	
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
 #	# Update game logic here.
 #	pass
 
 func _on_newgamebutton_pressed():
-	#var g = get_node("/root/Global")
-	get_tree().change_scene("res://scenes/gameworld.tscn")
-
+	var g = get_node("/root/Global")
+	g.initScene("mainmenu")
+	get_tree().change_scene("res://scenes/charactercreation.tscn")
+	#var ms = get_node("/root/GlobalMusic/")
+	#ms.stop("midnight.wav")
 
 func _on_quitbutton_pressed():
 	get_tree().quit()
 	
+func _input(event):
+	pass
+
 func _process(delta):
-	if Input.is_action_just_pressed("fullscreen"):
-		OS.window_fullscreen = not OS.window_fullscreen
+	pass

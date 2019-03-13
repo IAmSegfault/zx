@@ -7,28 +7,31 @@
 
 [node name="mentat" type="Sprite" parent="." index="0"]
 
+modulate = Color( 1, 0.972549, 0.752941, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="enforcer" type="Sprite" parent="." index="1"]
 
+modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 16, 0 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 [node name="ranger" type="Sprite" parent="." index="2"]
 
+modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 32, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
+_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
 

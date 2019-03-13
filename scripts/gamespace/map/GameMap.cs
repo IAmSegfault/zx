@@ -4,8 +4,8 @@ using RogueSharp;
 
 public class RMap : Map
 {
-    private int width{get;set;}
-    private int height{get;set;}
+    public int width{get;private set;}
+    public int height{get;private set;}
 
     public RMap(int width, int height)
     {

@@ -1,19 +1,23 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scripts/kernel/gwk.cs" type="Script" id=1]
 [ext_resource path="res://scripts/kernel/Ecs.cs" type="Script" id=2]
-[ext_resource path="res://scripts/kernel/Loader.gd" type="Script" id=3]
-[ext_resource path="res://assets/bgatlas.tres" type="TileSet" id=4]
-[ext_resource path="res://scripts/gamespace/map/GameMap.cs" type="Script" id=5]
-[ext_resource path="res://assets/actoratlas.tres" type="TileSet" id=6]
-[ext_resource path="res://scripts/logpanel.gd" type="Script" id=7]
-[ext_resource path="res://assets/uipanel.tres" type="TileSet" id=8]
-[ext_resource path="res://assets/FiraMono-Regular.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://assets/gwuitheme.tres" type="Theme" id=10]
-[ext_resource path="res://scripts/ui/UiLog.cs" type="Script" id=11]
-[ext_resource path="res://scripts/gamepanel.gd" type="Script" id=12]
+[ext_resource path="res://assets/bgatlas.tres" type="TileSet" id=3]
+[ext_resource path="res://scripts/gamespace/map/GameMap.cs" type="Script" id=4]
+[ext_resource path="res://assets/actoratlas.tres" type="TileSet" id=5]
+[ext_resource path="res://scripts/logpanel.gd" type="Script" id=6]
+[ext_resource path="res://assets/uipanel.tres" type="TileSet" id=7]
+[ext_resource path="res://assets/FiraMono-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/gwuitheme.tres" type="Theme" id=9]
+[ext_resource path="res://scripts/ui/UiLog.cs" type="Script" id=10]
+[ext_resource path="res://scripts/gamepanel.gd" type="Script" id=11]
+[ext_resource path="res://assets/wmatlas.tres" type="TileSet" id=12]
 [ext_resource path="res://scripts/characterstatsblock.cs" type="Script" id=13]
 [ext_resource path="res://assets/white.png" type="Texture" id=14]
+[ext_resource path="res://assets/color_bleed.shader" type="Shader" id=15]
+[ext_resource path="res://assets/fog.shader" type="Shader" id=16]
+[ext_resource path="res://assets/grain2.png" type="Texture" id=17]
+[ext_resource path="res://assets/dt5.png" type="Texture" id=18]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -22,46 +26,60 @@ content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 
-[sub_resource type="DynamicFont" id=2]
-
-size = 8
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 9 )
-_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
-
-[sub_resource type="DynamicFont" id=3]
-
-size = 12
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 9 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
 content_margin_top = -1.0
 content_margin_bottom = -1.0
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=3]
+
+size = 8
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 12
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+content_margin_left = -1.0
+content_margin_right = -1.0
+content_margin_top = -1.0
+content_margin_bottom = -1.0
+
+[sub_resource type="DynamicFont" id=7]
 
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=8]
 
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 9 )
+font_data = ExtResource( 8 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="Shader" id=7]
+[sub_resource type="Shader" id=9]
 
 code = "shader_type canvas_item;
 
@@ -79,15 +97,15 @@ void fragment()
 }"
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="ShaderMaterial" id=8]
+[sub_resource type="ShaderMaterial" id=10]
 
 render_priority = 0
-shader = SubResource( 7 )
+shader = SubResource( 9 )
 shader_param/color_bleeding = null
 shader_param/bleeding_range = null
 shader_param/screen_width = null
 
-[sub_resource type="Shader" id=9]
+[sub_resource type="Shader" id=11]
 
 code = "shader_type canvas_item;
 
@@ -123,103 +141,37 @@ COLOR = texture(SCREEN_TEXTURE,xy);
 }"
 _sections_unfolded = [ "Resource" ]
 
-[sub_resource type="ShaderMaterial" id=10]
-
-render_priority = 0
-shader = SubResource( 9 )
-shader_param/BarrelPower = null
-
-[sub_resource type="Shader" id=11]
-
-code = "shader_type canvas_item;
-
-uniform float screen_width = 1280;
-uniform float screen_height = 720;
-
-// Curvature
-uniform float BarrelPower =1.1;
-// Color bleeding
-uniform float color_bleeding = 1.2;
-uniform float bleeding_range_x = 2;
-uniform float bleeding_range_y = 2;
-// Scanline
-uniform float lines_distance = 4.0;
-uniform float scan_size = 2.0;
-uniform float scanline_alpha = 0.9;
-uniform float lines_velocity = 30.0;
-vec2 distort(vec2 p) 
-{
-
-	float angle = p.y / p.x;
-	float theta = atan(p.y,p.x);
-	float radius = pow(length(p), BarrelPower);
-	
-	p.x = radius * cos(theta);
-	p.y = radius * sin(theta);
-	
-	return 0.5 * (p + vec2(1.0,1.0));
-}
-
-void get_color_bleeding(inout vec4 current_color,inout vec4 color_left){
-
-	current_color = current_color*vec4(color_bleeding,0.5,0.25,1);
-	color_left = color_left*vec4(0.25,0.5,color_bleeding,1);
-}
-
-void get_color_scanline(vec2 uv,inout vec4 c,float TIME){
-	float line_row = floor((uv.y * screen_height/scan_size) + mod(TIME*lines_velocity, lines_distance));
-
-	float n = 1.0 - ceil((mod(line_row,lines_distance)/lines_distance));
-
-	c = c - n*c*(1.0 - scanline_alpha);
-	c.a = 1.0;
-
-}
-
-void fragment()
-{
-	
-vec2 xy = SCREEN_UV * 2.0;
-xy.x -= 1.0;
-xy.y -= 1.0;
-
-float d = length(xy);
-if(d < 1.5){
-	xy = distort(xy);
-}
-else{
-	xy = SCREEN_UV;
-}
-
-float pixel_size_x = 1.0/screen_width*bleeding_range_x;
-float pixel_size_y = 1.0/screen_height*bleeding_range_y;
-vec4 color_left = texture(SCREEN_TEXTURE,SCREEN_UV - vec2(pixel_size_x, pixel_size_y));
-vec4 current_color = texture(SCREEN_TEXTURE,SCREEN_UV);
-get_color_bleeding(current_color,color_left);
-vec4 c = current_color+color_left;
-//get_color_scanline(xy,c,TIME);
-COLOR = c;
-
-}
-"
-
 [sub_resource type="ShaderMaterial" id=12]
 
 render_priority = 0
 shader = SubResource( 11 )
-shader_param/screen_width = 1280.0
-shader_param/screen_height = 720.0
-shader_param/BarrelPower = 1.8
-shader_param/color_bleeding = 0.825
-shader_param/bleeding_range_x = 0.4
-shader_param/bleeding_range_y = 0.4
-shader_param/lines_distance = null
+shader_param/BarrelPower = null
+
+[sub_resource type="ShaderMaterial" id=13]
+
+render_priority = 0
+shader = ExtResource( 15 )
+shader_param/screen_width = null
+shader_param/screen_height = null
+shader_param/BarrelPower = null
+shader_param/color_bleeding = 0.81
+shader_param/bleeding_range_x = 0.3
+shader_param/bleeding_range_y = 0.3
+shader_param/lines_distance = 0.85
 shader_param/scan_size = null
 shader_param/scanline_alpha = null
 shader_param/lines_velocity = null
 _sections_unfolded = [ "shader_param" ]
 
-[node name="root" type="Node" index="0"]
+[sub_resource type="ShaderMaterial" id=14]
+
+render_priority = 0
+shader = ExtResource( 16 )
+shader_param/color = Vector3( 0.15, 0.15, 0.28 )
+shader_param/octaves = 8
+_sections_unfolded = [ "shader_param" ]
+
+[node name="scene" type="Node" index="0"]
 
 [node name="kernel" type="Node" parent="." index="0"]
 
@@ -231,18 +183,14 @@ script = ExtResource( 1 )
 
 script = ExtResource( 2 )
 
-[node name="Loader" type="Node" parent="kernel" index="2"]
+[node name="gamespace" type="Node" parent="kernel/Ecs" index="0"]
 
-script = ExtResource( 3 )
+[node name="map" type="Node" parent="kernel/Ecs/gamespace" index="0"]
 
-[node name="gamespace" type="Node" parent="." index="1"]
-
-[node name="map" type="Node" parent="gamespace" index="0"]
-
-[node name="GameMap" type="TileMap" parent="gamespace/map" index="0"]
+[node name="GameMap" type="TileMap" parent="kernel/Ecs/gamespace/map" index="0"]
 
 mode = 0
-tile_set = ExtResource( 4 )
+tile_set = ExtResource( 3 )
 cell_size = Vector2( 16, 24 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -257,14 +205,14 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 262147, 128, 0, 262148, 127, 0, 262149, 127, 0, 262150, 127, 0, 262151, 127, 0, 262152, 127, 0, 262153, 128, 0, 327683, 128, 0, 327685, 113, 0, 327686, 113, 0, 327687, 113, 0, 327689, 128, 0, 393219, 128, 0, 393220, 113, 0, 393221, 113, 0, 393222, 113, 0, 393223, 113, 0, 393224, 113, 0, 393225, 128, 0, 458755, 129, 0, 458756, 129, 0, 458757, 128, 0, 458758, 115, 0, 458759, 128, 0, 458760, 129, 0, 458761, 129, 0, 524293, 128, 0, 524294, 46, 0, 524295, 128, 0, 589829, 128, 0, 589830, 46, 0, 589831, 128, 0, 655362, 128, 0, 655363, 127, 0, 655364, 127, 0, 655365, 127, 0, 655366, 114, 0, 655367, 127, 0, 655368, 127, 0, 655369, 127, 0, 655370, 128, 0, 720898, 128, 0, 720899, 113, 0, 720900, 113, 0, 720901, 113, 0, 720902, 113, 0, 720903, 113, 0, 720904, 113, 0, 720905, 113, 0, 720906, 128, 0, 786434, 128, 0, 786435, 113, 0, 786436, 113, 0, 786437, 113, 0, 786438, 113, 0, 786439, 113, 0, 786440, 113, 0, 786441, 113, 0, 786442, 128, 0, 851970, 128, 0, 851971, 113, 0, 851972, 113, 0, 851973, 113, 0, 851974, 113, 0, 851975, 113, 0, 851976, 113, 0, 851977, 113, 0, 851978, 128, 0, 917506, 127, 0, 917507, 127, 0, 917508, 127, 0, 917509, 127, 0, 917510, 127, 0, 917511, 127, 0, 917512, 127, 0, 917513, 127, 0, 917514, 127, 0, 1376310, 111, 0, 1376311, 117, 0, 1376313, 117, 0, 1376314, 111, 0, 1441846, 111, 0, 1441850, 111, 0, 1507382, 111, 0, 1507386, 111, 0, 1572918, 117, 0, 1572919, 117, 0, 1572921, 117, 0, 1572922, 117, 0 )
-script = ExtResource( 5 )
-_sections_unfolded = [ "Cell" ]
+tile_data = PoolIntArray( 262147, 128, 0, 262148, 127, 0, 262149, 127, 0, 262150, 127, 0, 262151, 127, 0, 262152, 127, 0, 262153, 128, 0, 327683, 128, 0, 327685, 113, 0, 327686, 113, 0, 327687, 113, 0, 327689, 128, 0, 393219, 128, 0, 393220, 113, 0, 393221, 113, 0, 393222, 113, 0, 393223, 113, 0, 393224, 113, 0, 393225, 128, 0, 458755, 129, 0, 458756, 129, 0, 458757, 128, 0, 458758, 115, 0, 458759, 128, 0, 458760, 129, 0, 458761, 129, 0, 524293, 128, 0, 524294, 46, 0, 524295, 128, 0, 589829, 128, 0, 589830, 46, 0, 589831, 128, 0, 655361, 142, 0, 655362, 128, 0, 655363, 127, 0, 655364, 127, 0, 655365, 127, 0, 655366, 114, 0, 655367, 127, 0, 655368, 127, 0, 655369, 127, 0, 655370, 128, 0, 655371, 142, 0, 720897, 142, 0, 720898, 128, 0, 720899, 180, 0, 720900, 180, 0, 720901, 180, 0, 720902, 180, 0, 720903, 113, 0, 720904, 113, 0, 720905, 113, 0, 720906, 128, 0, 720907, 142, 0, 786433, 142, 0, 786434, 128, 0, 786435, 180, 0, 786436, 180, 0, 786437, 180, 0, 786438, 180, 0, 786439, 142, 0, 786440, 142, 0, 786441, 142, 0, 786442, 128, 0, 786443, 142, 0, 851969, 142, 0, 851970, 128, 0, 851971, 180, 0, 851972, 180, 0, 851973, 180, 0, 851974, 180, 0, 851975, 142, 0, 851976, 142, 0, 851977, 142, 0, 851978, 128, 0, 851979, 142, 0, 917505, 142, 0, 917506, 127, 0, 917507, 127, 0, 917508, 127, 0, 917509, 127, 0, 917510, 127, 0, 917511, 127, 0, 917512, 127, 0, 917513, 127, 0, 917514, 127, 0, 917515, 142, 0, 917520, 180, 0, 917521, 180, 0, 917522, 180, 0, 917523, 180, 0, 917524, 180, 0, 917525, 180, 0, 983041, 142, 0, 983042, 142, 0, 983043, 142, 0, 983044, 142, 0, 983045, 142, 0, 983046, 142, 0, 983047, 142, 0, 983048, 142, 0, 983049, 142, 0, 983050, 142, 0, 983051, 142, 0, 983056, 184, 0, 983057, 184, 0, 983058, 184, 0, 983059, 184, 0, 983060, 184, 0, 983061, 184, 0, 1114112, 111, 0, 1114113, 111, 0, 1114114, 111, 0, 1114115, 111, 0, 1114116, 111, 0, 1114117, 111, 0, 1114118, 111, 0, 1114119, 111, 0, 1114120, 111, 0, 1114121, 111, 0, 1114122, 111, 0, 1114123, 111, 0, 1114124, 111, 0, 1179648, 111, 0, 1179660, 111, 0, 1245184, 111, 0, 1245196, 111, 0, 1310720, 111, 0, 1310732, 111, 0, 1376256, 111, 0, 1376268, 111, 0, 1376310, 111, 0, 1376311, 117, 0, 1376313, 117, 0, 1376314, 111, 0, 1441792, 111, 0, 1441804, 111, 0, 1441846, 111, 0, 1441850, 111, 0, 1507328, 117, 0, 1507329, 117, 0, 1507330, 117, 0, 1507331, 117, 0, 1507332, 117, 0, 1507333, 117, 0, 1507334, 117, 0, 1507335, 117, 0, 1507336, 117, 0, 1507337, 117, 0, 1507338, 117, 0, 1507339, 117, 0, 1507340, 117, 0, 1507382, 111, 0, 1507386, 111, 0, 1572918, 117, 0, 1572919, 117, 0, 1572921, 117, 0, 1572922, 117, 0 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Cell", "Z Index" ]
 
-[node name="ActorMap" type="TileMap" parent="gamespace/map/GameMap" index="0"]
+[node name="ActorMap" type="TileMap" parent="kernel/Ecs/gamespace/map/GameMap" index="0"]
 
 mode = 0
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 5 )
 cell_size = Vector2( 16, 24 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -279,10 +227,12 @@ collision_layer = 1
 collision_mask = 1
 occluder_light_mask = 1
 format = 1
-tile_data = PoolIntArray( 327684, 0, 0, 327688, 1, 0, 720900, 2, 0 )
+tile_data = PoolIntArray( 786462, 2, 0 )
 _sections_unfolded = [ "Cell", "Transform" ]
 
-[node name="ui" type="Node" parent="." index="2"]
+[node name="ui" type="Node" parent="." index="1"]
+
+editor/display_folded = true
 
 [node name="uicontainer" type="Container" parent="ui" index="0"]
 
@@ -315,13 +265,13 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_styles/panel = SubResource( 1 )
-script = ExtResource( 7 )
-_sections_unfolded = [ "Focus", "Hint", "Margin", "Theme", "Visibility", "custom_styles" ]
+script = ExtResource( 6 )
+_sections_unfolded = [ "Focus", "Hint", "Margin", "Rect", "Theme", "Visibility", "custom_styles" ]
 
 [node name="logborder" type="TileMap" parent="ui/uicontainer/logpanel" index="0"]
 
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 24 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -355,7 +305,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/normal_font = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/normal_font = SubResource( 3 )
 bbcode_enabled = false
 bbcode_text = ""
 visible_characters = -1
@@ -367,7 +318,7 @@ scroll_active = false
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
+_sections_unfolded = [ "Margin", "Rect", "custom_fonts", "custom_styles" ]
 
 [node name="UiLog" type="RichTextLabel" parent="ui/uicontainer/logpanel" index="1"]
 
@@ -385,8 +336,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-theme = ExtResource( 10 )
-custom_fonts/normal_font = SubResource( 3 )
+theme = ExtResource( 9 )
+custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 bbcode_text = ""
 visible_characters = -1
@@ -398,7 +349,7 @@ scroll_active = true
 scroll_following = true
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 11 )
+script = ExtResource( 10 )
 _sections_unfolded = [ "BBCode", "Margin", "Theme", "custom_fonts", "custom_styles" ]
 
 [node name="gamepanel" type="Panel" parent="ui/uicontainer" index="1"]
@@ -416,14 +367,14 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_styles/panel = SubResource( 4 )
-script = ExtResource( 12 )
+custom_styles/panel = SubResource( 5 )
+script = ExtResource( 11 )
 _sections_unfolded = [ "Margin", "Theme", "custom_styles" ]
 
 [node name="gameborder" type="TileMap" parent="ui/uicontainer/gamepanel" index="0"]
 
 mode = 0
-tile_set = ExtResource( 8 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 24 )
 cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
@@ -457,12 +408,13 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource( 10 )
+theme = ExtResource( 9 )
+custom_styles/panel = SubResource( 6 )
 tab_align = 0
 tabs_visible = true
-_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags", "Theme", "Visibility" ]
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags", "Theme", "Visibility", "custom_styles" ]
 
-[node name="Char" type="Tabs" parent="ui/uicontainer/gamepanel/gamepaneltabs" index="0"]
+[node name="Zone" type="Tabs" parent="ui/uicontainer/gamepanel/gamepaneltabs" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -480,9 +432,50 @@ tab_close_display_policy = 1
 scrolling_enabled = true
 _sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Size Flags", "Theme", "custom_icons" ]
 
+[node name="MiniMap" type="TileMap" parent="ui/uicontainer/gamepanel/gamepaneltabs/Zone" index="0"]
+
+mode = 0
+tile_set = ExtResource( 12 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 2031618, 9, 0, 2031619, 1, 0, 2031620, 1, 0, 2031621, 1, 0, 2031622, 1, 0, 2031623, 1, 0, 2031624, 1, 0, 2031625, 1, 0, 2031626, 1, 0, 2031627, 1, 0, 2031628, 3, 0, 2031629, 3, 0, 2031630, 3, 0, 2031631, 3, 0, 2031632, 3, 0, 2097154, 9, 0, 2097155, 1, 0, 2097156, 1, 0, 2097157, 1, 0, 2097158, 1, 0, 2097159, 1, 0, 2097160, 1, 0, 2097161, 1, 0, 2097162, 1, 0, 2097163, 1, 0, 2097164, 3, 0, 2097165, 3, 0, 2097166, 4, 0, 2097167, 3, 0, 2097168, 3, 0, 2162690, 9, 0, 2162691, 1, 0, 2162692, 1, 0, 2162693, 8, 0, 2162694, 1, 0, 2162695, 1, 0, 2162696, 1, 0, 2162697, 1, 0, 2162698, 1, 0, 2162699, 1, 0, 2162700, 1, 0, 2162701, 3, 0, 2162702, 2, 0, 2162703, 3, 0, 2162704, 3, 0, 2228226, 9, 0, 2228227, 1, 0, 2228228, 1, 0, 2228229, 1, 0, 2228230, 1, 0, 2228231, 1, 0, 2228232, 1, 0, 2228233, 1, 0, 2228234, 1, 0, 2228235, 1, 0, 2228236, 2, 0, 2228237, 2, 0, 2228238, 2, 0, 2228239, 2, 0, 2228240, 3, 0, 2293762, 9, 0, 2293763, 1, 0, 2293764, 1, 0, 2293765, 1, 0, 2293766, 1, 0, 2293767, 1, 0, 2293768, 1, 0, 2293769, 6, 0, 2293770, 1, 0, 2293771, 1, 0, 2293772, 2, 0, 2293773, 7, 0, 2293774, 2, 0, 2293775, 2, 0, 2293776, 1, 0, 2359298, 9, 0, 2359299, 1, 0, 2359300, 1, 0, 2359301, 1, 0, 2359302, 1, 0, 2359303, 1, 0, 2359304, 1, 0, 2359305, 1, 0, 2359306, 1, 0, 2359307, 1, 0, 2359308, 1, 0, 2359309, 1, 0, 2359310, 1, 0, 2359311, 1, 0, 2359312, 1, 0, 2424834, 9, 0, 2424835, 0, 0, 2424836, 1, 0, 2424837, 1, 0, 2424838, 1, 0, 2424839, 5, 0, 2424840, 5, 0, 2424841, 5, 0, 2424842, 1, 0, 2424843, 1, 0, 2424844, 5, 0, 2424845, 5, 0, 2424846, 5, 0, 2424847, 5, 0, 2424848, 5, 0, 2490370, 9, 0, 2490371, 0, 0, 2490372, 0, 0, 2490373, 1, 0, 2490374, 1, 0, 2490375, 1, 0, 2490376, 5, 0, 2490377, 5, 0, 2490378, 5, 0, 2490379, 5, 0, 2490380, 5, 0, 2490381, 5, 0, 2490382, 5, 0, 2490383, 5, 0, 2490384, 5, 0, 2555906, 9, 0, 2555907, 0, 0, 2555908, 0, 0, 2555909, 0, 0, 2555910, 1, 0, 2555911, 1, 0, 2555912, 5, 0, 2555913, 5, 0, 2555914, 5, 0, 2555915, 5, 0, 2555916, 5, 0, 2555917, 5, 0, 2555918, 5, 0, 2555919, 5, 0, 2555920, 5, 0, 2621442, 9, 0, 2621443, 0, 0, 2621444, 0, 0, 2621445, 0, 0, 2621446, 1, 0, 2621447, 1, 0, 2621448, 5, 0, 2621449, 5, 0, 2621450, 5, 0, 2621451, 5, 0, 2621452, 5, 0, 2621453, 5, 0, 2621454, 5, 0, 2621455, 5, 0, 2621456, 5, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="MiniMapBorder" type="TileMap" parent="ui/uicontainer/gamepanel/gamepaneltabs/Zone" index="1"]
+
+mode = 0
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 16, 24 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 1310721, 0, 0, 1310722, 4, 0, 1310723, 4, 0, 1310724, 4, 0, 1310725, 4, 0, 1310726, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1310729, 4, 0, 1310730, 4, 0, 1310731, 4, 0, 1310732, 4, 0, 1310733, 4, 0, 1310734, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 1, 0, 1376257, 5, 0, 1376273, 5, 0, 1441793, 5, 0, 1441809, 5, 0, 1507329, 5, 0, 1507345, 5, 0, 1572865, 5, 0, 1572881, 5, 0, 1638401, 5, 0, 1638417, 5, 0, 1703937, 5, 0, 1703953, 5, 0, 1769473, 2, 0, 1769474, 4, 0, 1769475, 4, 0, 1769476, 4, 0, 1769477, 4, 0, 1769478, 4, 0, 1769479, 4, 0, 1769480, 4, 0, 1769481, 4, 0, 1769482, 4, 0, 1769483, 4, 0, 1769484, 4, 0, 1769485, 4, 0, 1769486, 4, 0, 1769487, 4, 0, 1769488, 4, 0, 1769489, 3, 0 )
+_sections_unfolded = [ "Cell", "Transform" ]
+
 [node name="Stats" type="Tabs" parent="ui/uicontainer/gamepanel/gamepaneltabs" index="1"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -514,8 +507,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-custom_fonts/mono_font = SubResource( 5 )
-custom_fonts/normal_font = SubResource( 6 )
+custom_fonts/mono_font = SubResource( 7 )
+custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0.689728, 0.689728, 0.757813, 1 )
 bbcode_enabled = false
 bbcode_text = ""
@@ -549,8 +542,9 @@ tab_align = 0
 tab_close_display_policy = 1
 scrolling_enabled = true
 
-[node name="shaders" type="Control" parent="." index="3"]
+[node name="shaders" type="Control" parent="." index="2"]
 
+editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -570,7 +564,7 @@ size_flags_vertical = 1
 [node name="ColorBleed" type="TextureRect" parent="shaders" index="0"]
 
 visible = false
-material = SubResource( 8 )
+material = SubResource( 10 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -591,7 +585,7 @@ _sections_unfolded = [ "Material" ]
 [node name="Curvature" type="TextureRect" parent="shaders" index="1"]
 
 visible = false
-material = SubResource( 10 )
+material = SubResource( 12 )
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -608,28 +602,38 @@ texture = ExtResource( 14 )
 stretch_mode = 0
 _sections_unfolded = [ "Margin", "Material" ]
 
-[node name="shaderfilter" type="TextureRect" parent="." index="4"]
+[node name="ShaderFilter" type="Sprite" parent="." index="3"]
 
-material = SubResource( 12 )
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = -2.0
-margin_right = 1280.0
-margin_bottom = 720.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
+material = SubResource( 13 )
+scale = Vector2( 15, 9.38 )
 texture = ExtResource( 14 )
-expand = true
-stretch_mode = 0
-_sections_unfolded = [ "Focus", "Margin", "Material", "Mouse", "Pause" ]
+centered = false
+_sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Z Index" ]
 
-[connection signal="load_processor" from="kernel/Loader" to="kernel/Ecs" method="_on_Loader_load_processor"]
+[node name="ShaderFog" type="Sprite" parent="." index="4"]
+
+material = SubResource( 14 )
+scale = Vector2( 15, 9.38 )
+z_index = -2
+texture = ExtResource( 14 )
+centered = false
+_sections_unfolded = [ "Material", "Offset", "Transform", "Z Index" ]
+
+[node name="filmgrain" type="Sprite" parent="." index="5"]
+
+modulate = Color( 1, 1, 1, 0.219608 )
+position = Vector2( 640, 0 )
+z_index = -1
+texture = ExtResource( 17 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="photo" type="Sprite" parent="." index="6"]
+
+modulate = Color( 1, 1, 1, 0.219608 )
+position = Vector2( 700, 420 )
+z_index = -1
+texture = ExtResource( 18 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
 
 [connection signal="tab_changed" from="ui/uicontainer/gamepanel/gamepaneltabs" to="ui/uicontainer/gamepanel/gamepaneltabs/Stats/characterstatsblock" method="_on_gamepaneltabs_tab_changed"]
 
