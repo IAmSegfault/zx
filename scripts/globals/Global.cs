@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Godot;
+using GContainers = Godot.Collections;
 using RogueSharp.DiceNotation;
 
 namespace Zona.Engine
@@ -50,12 +51,12 @@ namespace Zona.Engine
             }
         }
 
-        public Godot.Dictionary getStatBlocks()
+        public GContainers.Dictionary getStatBlocks()
         {
-            Godot.Dictionary dict = new Godot.Dictionary();
+            GContainers.Dictionary dict = new GContainers.Dictionary();
             for(int i = 0; i < 5; i++)
             {
-                Godot.Array sb = new Godot.Array();
+                GContainers.Array sb = new GContainers.Array();
                 for(int j = 0; j < 6; j++)
                 {
                     int stat = Dice.Roll("3d6");

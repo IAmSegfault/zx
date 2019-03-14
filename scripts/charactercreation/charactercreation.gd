@@ -20,9 +20,9 @@ func _input(event):
 	if event is InputEventKey:
 		if event.pressed and event.scancode == KEY_ESCAPE:
 			if state == "random":
-				get_tree().change_scene("res://scenes/mainmenu.tscn")
+				var i = get_tree().change_scene("res://scenes/mainmenu.tscn")
 			elif state == "class_select":
-				get_tree().change_scene("res://scenes/mainmenu.tscn")
+				var i = get_tree().change_scene("res://scenes/mainmenu.tscn")
 			elif state == "stat_select":
 				state = "class_select"
 				var ss = get_node("./StatSelect")
@@ -47,7 +47,7 @@ func _input(event):
 					ss.vlock = true
 					ss.popup_centered()
 				else:
-					get_tree().change_scene("res://scenes/mainmenu.tscn")
+					var i = get_tree().change_scene("res://scenes/mainmenu.tscn")
 
 
 func _on_RandomYesButton_pressed():
@@ -174,9 +174,9 @@ func _on_StatSelectButton_pressed():
 func _on_NameInputButton_pressed():
 	var ntb = get_node("./NameInput/NameTextBox")
 	if ntb.text != "":
-		get_tree().change_scene("res://scenes/gameworld.tscn")
+		var i = get_tree().change_scene("res://scenes/gameworld.tscn")
 
 func _on_NameTextBox_text_entered(text):
 	var ntb = get_node("./NameInput/NameTextBox")
 	if ntb.text != "":
-		get_tree().change_scene("res://scenes/gameworld.tscn")
+		var i = get_tree().change_scene("res://scenes/gameworld.tscn")

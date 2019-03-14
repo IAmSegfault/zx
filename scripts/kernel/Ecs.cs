@@ -1,6 +1,7 @@
 using Godot;
+using GContainers = Godot.Collections;
 using System;
-using Containers = System.Collections.Generic;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
 using System.Runtime.Remoting;
@@ -35,16 +36,16 @@ namespace Zona
             // private int a = 2;
             // private string b = "textvar";
             private ulong idCtr;
-            public Containers.List<Entity> entities;
+            public List<Entity> entities;
             public LocalMap[] loadedMaps{get; private set;}
-            private Containers.Dictionary<WorldPosition, Chunk> worldMapChunks;
-            private Containers.Dictionary<MapPosition, CSVClass> staticMapStore;
+            private Dictionary<WorldPosition, Chunk> worldMapChunks;
+            private Dictionary<MapPosition, CSVClass> staticMapStore;
             //Denotes that a given localmap should be loaded from cold storage rather than the static map store.
             private System.Collections.Generic.Dictionary<MapPosition, bool> dirtyStaticMaps;
 
             private WorldPosition loadedChunk;
 
-            private Containers.List<Containers.List<Processor>> processors;
+            private List<List<Processor>> processors;
 
             private void loadStaticMaps()
             {
@@ -52,7 +53,7 @@ namespace Zona
                 var dir = new Directory();
                 dir.Open(dirPath);
                 dir.ListDirBegin();
-                Containers.List<string> files = new Containers.List<string>();
+                List<string> files = new List<string>();
                 while(true)
                 {
                     var f = dir.GetNext();
@@ -74,7 +75,7 @@ namespace Zona
                     string text = file.GetAsText();
                     file.Close();
                     var jsonData = JSON.Parse(text);
-                    Godot.Dictionary dataDict = jsonData.Result as Godot.Dictionary;
+                    GContainers.Dictionary dataDict = jsonData.Result as GContainers.Dictionary;
                     string csvFile = (string)dataDict["file"];
                     CSVClass csvClass = CSVParser.parse(csvFile);
                     
@@ -89,13 +90,13 @@ namespace Zona
                 string text = file.GetAsText();
                 file.Close();
                 var data = JSON.Parse(text);        
-                Godot.Dictionary dataDict = data.Result as Godot.Dictionary;
+                GContainers.Dictionary dataDict = data.Result as GContainers.Dictionary;
                 
-                Godot.Array processors = (Godot.Array)dataDict["processors"];
-                Godot.Array priorities = (Godot.Array)dataDict["priorities"];
+                GContainers.Array processors = (GContainers.Array)dataDict["processors"];
+                GContainers.Array priorities = (GContainers.Array)dataDict["priorities"];
                 
                 var processorList = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "Zona.ECSProcessor").ToList();
-                Containers.List<string> processorClassList = new Containers.List<string>();
+                List<string> processorClassList = new List<string>();
 
                 foreach(Type type in processorList)
                 {
@@ -127,13 +128,13 @@ namespace Zona
                 string entityText = entityFile.GetAsText();
                 entityFile.Close();
                 Godot.JSONParseResult entityData = JSON.Parse(entityText);        
-                Godot.Dictionary entityDataDict = (Godot.Dictionary)entityData.Result;
-                Godot.Array gEntities = (Godot.Array)entityDataDict["entities"];
+                GContainers.Dictionary entityDataDict = (GContainers.Dictionary)entityData.Result;
+                GContainers.Array gEntities = (GContainers.Array)entityDataDict["entities"];
                 
-                Godot.Array gArgs = (Godot.Array)entityDataDict["args"];
+                GContainers.Array gArgs = (GContainers.Array)entityDataDict["args"];
                 
                 var entityList = Assembly.GetExecutingAssembly().GetTypes().Where(t => t.Namespace == "Zona.ECSEntity").ToList();
-                Containers.List<Type> loadedClasses = new Containers.List<Type>();
+                List<Type> loadedClasses = new List<Type>();
                 foreach(object entity in gEntities)
                 {
                     string e = Convert.ToString(entity);
@@ -149,7 +150,7 @@ namespace Zona
 
                 for(int i = 0; i < gArgs.Count; i++)
                 {
-                    Godot.Array gargs = (Godot.Array)gArgs[i];
+                    GContainers.Array gargs = (GContainers.Array)gArgs[i];
                     var c = gargs.Count;
                     object[] args = new object[c];
 					for(int j = 0; j < c; j++)
@@ -179,7 +180,7 @@ namespace Zona
                 this.loadStaticMaps();
                 this.idCtr = 0;
                 this.loadedMaps = new LocalMap[9];
-                this.entities = new Containers.List<Entity>();
+                this.entities = new List<Entity>();
         
                 //this.entities.Add(new Zona.ECSEntity.Camera2D(0,0,60,25,ViewportType.local));
                 for(int i = 0; i < 9; i++)
@@ -187,10 +188,10 @@ namespace Zona
                     this.loadedMaps[i] = new LocalMap(128, 128);
                 }
 
-                this.processors = new Containers.List<Containers.List<Processor>>();
+                this.processors = new List<List<Processor>>();
                 for(int i = 0; i < 16; i++)
                 {
-                    Containers.List<Processor> row = new Containers.List<Processor>();
+                    List<Processor> row = new List<Processor>();
                     this.processors.Add(row);
                 }
                 // Called every time the node is added to the scene.
@@ -223,9 +224,9 @@ namespace Zona
                 }
             }
 
-            public Containers.List<Entity> getEntities(Containers.List<string> tags)
+            public List<Entity> getEntities(List<string> tags)
             {
-                Containers.List<Entity> entities = new Containers.List<Entity>();
+                List<Entity> entities = new List<Entity>();
                 foreach(Entity entity in this.entities)
                 {
                     bool hasAllComponents = true;
@@ -253,7 +254,7 @@ namespace Zona
                 //The logic loop
                 for(int i = 0; i < 16; i++)
                 {
-                    Containers.List<Processor> row = this.processors[i];
+                    List<Processor> row = this.processors[i];
                     foreach(Processor processor in row)
                     {
 
@@ -264,7 +265,7 @@ namespace Zona
                 //The render loop
                 for(int i = 0; i < 16; i++)
                 {
-                    Containers.List<Processor> row = this.processors[i];
+                    List<Processor> row = this.processors[i];
                     foreach(Processor processor in row)
                     {
                         //TODO: Query the state of the game so we can render the local map or the world map.

@@ -1,5 +1,6 @@
 using System;
 using Godot;
+using GContainers = Godot.Collections;
 namespace Zona.Engine
 {
     public class KinematicActor : KinematicBody2D
@@ -60,7 +61,7 @@ namespace Zona.Engine
 
         public Tween getTween()
         {
-            Godot.Array arr = this.GetChildren();
+            GContainers.Array arr = this.GetChildren();
             foreach(System.Object obj in arr)
             {
                 Node node = (Node)obj;
@@ -74,7 +75,7 @@ namespace Zona.Engine
 
         public Sprite getSprite()
         {
-            Godot.Array arr = this.GetChildren();
+            GContainers.Array arr = this.GetChildren();
             foreach(System.Object obj in arr)
             {
                 Node node = (Node)obj;
@@ -90,7 +91,7 @@ namespace Zona.Engine
 
         public Position2D getPosition2D()
         {
-            Godot.Array arr = this.GetChildren();
+            GContainers.Array arr = this.GetChildren();
 
             foreach(System.Object obj in arr)
             {
@@ -140,7 +141,6 @@ namespace Zona.Engine
                 var gm = (GameMap)GetNode("/root/scene/kernel/Ecs/gamespace/map/GameMap");
                 Vector2 v2 = new Vector2(x, y);
                 Vector2 pos = gm.MapToWorld(v2);
-                //this.kinematicActor.SetPosition(pos);
                 position2D.SetPosition(pos);
                 this.nodePaths.Add("/root/scene/kernel/Ecs/gamespace/map/GameMap/" + kinematicActor.Name);
             }
