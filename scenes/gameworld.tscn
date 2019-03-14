@@ -171,7 +171,7 @@ shader_param/color = Vector3( 0.15, 0.15, 0.28 )
 shader_param/octaves = 8
 _sections_unfolded = [ "shader_param" ]
 
-[node name="scene" type="Node" index="0"]
+[node name="scene" type="Node"]
 
 [node name="kernel" type="Node" parent="." index="0"]
 

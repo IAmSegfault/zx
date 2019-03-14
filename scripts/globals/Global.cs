@@ -22,7 +22,11 @@ namespace Zona.Engine
         {
             if(@event.IsAction("fullscreen"))
             {   
-                OS.WindowFullscreen = !OS.WindowFullscreen;
+                if(Input.IsActionJustPressed("fullscreen"))
+                {
+                    OS.WindowFullscreen = !OS.WindowFullscreen;
+                }
+                
             }		
         }
 

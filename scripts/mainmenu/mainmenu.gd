@@ -23,7 +23,7 @@ func _ready():
 	var g = get_node("/root/Global")
 	if not g.isInit("mainmenu"):
 		var ms = get_node("/root/GlobalMusic/")
-		ms.play("midnight.wav", 1)
+		ms.play("sunnspot.wav", 1)
 	
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
