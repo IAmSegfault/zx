@@ -1,7 +1,7 @@
 using Godot;
 using System;
 using RogueSharp;
-
+using Zona.Engine;
 public class RMap : Map
 {
     public int width{get;private set;}
@@ -26,10 +26,12 @@ public class GameMap : TileMap
     // private int a = 2;
     // private string b = "textvar";
     private RMap _rMap;
+    public string state{get; set;}
+    public Entity AT{get; set;}
     public override void _Ready()
     {
         this._rMap = new RMap(128, 128);
-
+        this.state = "init";
     }
 
     public void clearMap()

@@ -144,8 +144,6 @@ tile_data = PoolIntArray( 786462, 2, 0 )
 [node name="Ecs" type="Node" parent="gamespace"]
 script = ExtResource( 4 )
 
-[node name="map" type="Node" parent="gamespace"]
-
 [node name="ui" type="Node" parent="."]
 
 [node name="uicontainer" type="Container" parent="ui"]

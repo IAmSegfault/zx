@@ -30,7 +30,7 @@ namespace Zona.ECSEntity
             }
             return new Vector2(right - left, down - up);
         }
-        
+
         //TODO: Move this animation code to a mob entity, the player should be in the center of the map and not animated.
         public override void _Process(float delta)
         {
@@ -82,9 +82,11 @@ namespace Zona.ECSEntity
             int localMapX = Convert.ToInt32(args[5]);
             int localMapY = Convert.ToInt32(args[6]); 
             int lightRadius = Convert.ToInt32(args[7]);
+            int speed = Convert.ToInt32(args[8]);
             this.addTag("player");
             this.addComponent(new WorldPosition(worldX, worldY, chunkX, chunkY, chunkZ, localMapX, localMapY));
             this.addComponent(new LightRadius(lightRadius));
+            this.addComponent(new Actor(speed, true));
         }
         public override void _Ready()
         {

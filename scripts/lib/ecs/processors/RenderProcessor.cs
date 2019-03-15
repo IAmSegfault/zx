@@ -8,7 +8,7 @@ using RogueSharp;
 
 namespace Zona.ECSProcessor
 {
-    public class RenderProcessor : Node, Zona.Engine.Processor
+    public class RenderProcessor : Node, Processor
     {
         public RenderProcessor()
         {
@@ -18,10 +18,6 @@ namespace Zona.ECSProcessor
         public void postInit(Ecs ecs)
         {
             LocalMap map = ecs.loadedMaps[(int)NeighbourMapDirection.center];
-            foreach(Cell cell in map.GetAllCells())
-            {
-
-            }
         }
         public void process(Ecs ecs, float delta, params dynamic[] args)
         {

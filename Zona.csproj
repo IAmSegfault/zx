@@ -119,6 +119,8 @@
     <Compile Include="scripts\lib\util\enum\TileType.cs" />
     <Compile Include="scripts\lib\node\INode.cs" />
     <Compile Include="scripts\lib\node\ActorSprite.cs" />
+    <Compile Include="scripts\lib\ecs\components\Actor.cs" />
+    <Compile Include="scripts\lib\ecs\processors\CTProcessor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

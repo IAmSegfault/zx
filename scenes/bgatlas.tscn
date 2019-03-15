@@ -5,1659 +5,1294 @@
 [ext_resource path="res://assets/oryx_roguelike_2.0/water.png" type="Texture" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
-
-render_priority = 0
 shader = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="1_fff8c0" type="Sprite" parent="." index="0"]
-
+[node name="1_fff8c0" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Visibility" ]
 
-[node name="1_d44e52" type="Sprite" parent="." index="1"]
-
+[node name="1_d44e52" type="Sprite" parent="."]
 modulate = Color( 0.831373, 0.305882, 0.321569, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Visibility" ]
 
-[node name="1_84545c" type="Sprite" parent="." index="2"]
-
+[node name="1_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Visibility" ]
 
-[node name="1_3e5442" type="Sprite" parent="." index="3"]
-
+[node name="1_3e5442" type="Sprite" parent="."]
 modulate = Color( 0.243137, 0.329412, 0.258824, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Visibility" ]
 
-[node name="2" type="Sprite" parent="." index="4"]
-
+[node name="2" type="Sprite" parent="."]
 position = Vector2( 16, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="3" type="Sprite" parent="." index="5"]
-
+[node name="3" type="Sprite" parent="."]
 position = Vector2( 32, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="4" type="Sprite" parent="." index="6"]
-
+[node name="4" type="Sprite" parent="."]
 position = Vector2( 48, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="5" type="Sprite" parent="." index="7"]
-
+[node name="5" type="Sprite" parent="."]
 position = Vector2( 64, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="6" type="Sprite" parent="." index="8"]
-
+[node name="6" type="Sprite" parent="."]
 position = Vector2( 80, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="7" type="Sprite" parent="." index="9"]
-
+[node name="7" type="Sprite" parent="."]
 position = Vector2( 96, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="8" type="Sprite" parent="." index="10"]
-
+[node name="8" type="Sprite" parent="."]
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="8_d44e52" type="Sprite" parent="." index="11"]
-
+[node name="8_d44e52" type="Sprite" parent="."]
 modulate = Color( 0.831373, 0.305882, 0.321569, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="8_84545c" type="Sprite" parent="." index="12"]
-
+[node name="8_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="8_b27e56" type="Sprite" parent="." index="13"]
-
+[node name="8_b27e56" type="Sprite" parent="."]
 modulate = Color( 0.698039, 0.494118, 0.337255, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="8_2a2a3a" type="Sprite" parent="." index="14"]
-
+[node name="8_2a2a3a" type="Sprite" parent="."]
 modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="9" type="Sprite" parent="." index="15"]
-
+[node name="9" type="Sprite" parent="."]
 position = Vector2( 128, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="10" type="Sprite" parent="." index="16"]
-
+[node name="10" type="Sprite" parent="."]
 position = Vector2( 144, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="10_ec8a4b" type="Sprite" parent="." index="17"]
-
+[node name="10_ec8a4b" type="Sprite" parent="."]
 modulate = Color( 0.92549, 0.541176, 0.294118, 1 )
 position = Vector2( 144, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="10_84545c" type="Sprite" parent="." index="18"]
-
+[node name="10_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 144, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="11" type="Sprite" parent="." index="19"]
-
+[node name="11" type="Sprite" parent="."]
 position = Vector2( 160, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="12" type="Sprite" parent="." index="20"]
-
+[node name="12" type="Sprite" parent="."]
 position = Vector2( 176, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="13" type="Sprite" parent="." index="21"]
-
+[node name="13" type="Sprite" parent="."]
 position = Vector2( 192, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="14" type="Sprite" parent="." index="22"]
-
+[node name="14" type="Sprite" parent="."]
 position = Vector2( 208, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="15" type="Sprite" parent="." index="23"]
-
+[node name="15" type="Sprite" parent="."]
 position = Vector2( 224, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="16" type="Sprite" parent="." index="24"]
-
+[node name="16" type="Sprite" parent="."]
 position = Vector2( 240, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="17" type="Sprite" parent="." index="25"]
-
+[node name="17" type="Sprite" parent="."]
 position = Vector2( 256, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="18" type="Sprite" parent="." index="26"]
-
+[node name="18" type="Sprite" parent="."]
 position = Vector2( 272, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="19" type="Sprite" parent="." index="27"]
-
+[node name="19" type="Sprite" parent="."]
 position = Vector2( 288, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 0, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="20" type="Sprite" parent="." index="28"]
-
+[node name="20" type="Sprite" parent="."]
 position = Vector2( 0, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="20_d44e52" type="Sprite" parent="." index="29"]
-
+[node name="20_d44e52" type="Sprite" parent="."]
 modulate = Color( 0.831373, 0.305882, 0.321569, 1 )
 position = Vector2( 0, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="20_84545c" type="Sprite" parent="." index="30"]
-
+[node name="20_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 0, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="20_2a2a3a" type="Sprite" parent="." index="31"]
-
+[node name="20_2a2a3a" type="Sprite" parent="."]
 modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
 position = Vector2( 0, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="21" type="Sprite" parent="." index="32"]
-
+[node name="21" type="Sprite" parent="."]
 position = Vector2( 16, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="21_b27e56" type="Sprite" parent="." index="33"]
-
+[node name="21_b27e56" type="Sprite" parent="."]
 modulate = Color( 0.698039, 0.494118, 0.337255, 1 )
 position = Vector2( 16, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="22" type="Sprite" parent="." index="34"]
-
+[node name="22" type="Sprite" parent="."]
 position = Vector2( 32, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="22_b27e56" type="Sprite" parent="." index="35"]
-
+[node name="22_b27e56" type="Sprite" parent="."]
 modulate = Color( 0.698039, 0.494118, 0.337255, 1 )
 position = Vector2( 32, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="23" type="Sprite" parent="." index="36"]
-
+[node name="23" type="Sprite" parent="."]
 position = Vector2( 48, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="24" type="Sprite" parent="." index="37"]
-
+[node name="24" type="Sprite" parent="."]
 position = Vector2( 64, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="25" type="Sprite" parent="." index="38"]
-
+[node name="25" type="Sprite" parent="."]
 position = Vector2( 80, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="26" type="Sprite" parent="." index="39"]
-
+[node name="26" type="Sprite" parent="."]
 position = Vector2( 96, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="27" type="Sprite" parent="." index="40"]
-
+[node name="27" type="Sprite" parent="."]
 position = Vector2( 112, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="28" type="Sprite" parent="." index="41"]
-
+[node name="28" type="Sprite" parent="."]
 position = Vector2( 128, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="28_84545c" type="Sprite" parent="." index="42"]
-
+[node name="28_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 128, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="29" type="Sprite" parent="." index="43"]
-
+[node name="29" type="Sprite" parent="."]
 position = Vector2( 144, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="30" type="Sprite" parent="." index="44"]
-
+[node name="30" type="Sprite" parent="."]
 position = Vector2( 160, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="31" type="Sprite" parent="." index="45"]
-
+[node name="31" type="Sprite" parent="."]
 position = Vector2( 176, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="32" type="Sprite" parent="." index="46"]
-
+[node name="32" type="Sprite" parent="."]
 position = Vector2( 192, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="33" type="Sprite" parent="." index="47"]
-
+[node name="33" type="Sprite" parent="."]
 position = Vector2( 208, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="34" type="Sprite" parent="." index="48"]
-
+[node name="34" type="Sprite" parent="."]
 position = Vector2( 224, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="35" type="Sprite" parent="." index="49"]
-
+[node name="35" type="Sprite" parent="."]
 position = Vector2( 240, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="36" type="Sprite" parent="." index="50"]
-
+[node name="36" type="Sprite" parent="."]
 position = Vector2( 256, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="37" type="Sprite" parent="." index="51"]
-
+[node name="37" type="Sprite" parent="."]
 position = Vector2( 272, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="38" type="Sprite" parent="." index="52"]
-
+[node name="38" type="Sprite" parent="."]
 position = Vector2( 288, 24 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="39_38607c" type="Sprite" parent="." index="53"]
-
+[node name="39_38607c" type="Sprite" parent="."]
 material = SubResource( 1 )
 position = Vector2( 0, 48 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 24, 16, 24 )
-_sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="39_2a2a3a" type="Sprite" parent="." index="54"]
-
+[node name="39_2a2a3a" type="Sprite" parent="."]
 modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
 position = Vector2( 0, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="40_38607c" type="Sprite" parent="." index="55"]
-
+[node name="40_38607c" type="Sprite" parent="."]
 modulate = Color( 0.219608, 0.376471, 0.486275, 1 )
 position = Vector2( 16, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 72, 16, 24 )
-_sections_unfolded = [ "Material", "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="40_2a2a3a" type="Sprite" parent="." index="56"]
-
+[node name="40_2a2a3a" type="Sprite" parent="."]
 modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
 position = Vector2( 16, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="41" type="Sprite" parent="." index="57"]
-
+[node name="41" type="Sprite" parent="."]
 position = Vector2( 32, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="42" type="Sprite" parent="." index="58"]
-
+[node name="42" type="Sprite" parent="."]
 position = Vector2( 48, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="43" type="Sprite" parent="." index="59"]
-
+[node name="43" type="Sprite" parent="."]
 position = Vector2( 64, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="44" type="Sprite" parent="." index="60"]
-
+[node name="44" type="Sprite" parent="."]
 position = Vector2( 80, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="45" type="Sprite" parent="." index="61"]
-
+[node name="45" type="Sprite" parent="."]
 position = Vector2( 96, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="46" type="Sprite" parent="." index="62"]
-
+[node name="46" type="Sprite" parent="."]
 position = Vector2( 112, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="47_fff8c0" type="Sprite" parent="." index="63"]
-
+[node name="47_fff8c0" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 128, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="47_2a2a3a" type="Sprite" parent="." index="64"]
-
+[node name="47_2a2a3a" type="Sprite" parent="."]
 modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
 position = Vector2( 128, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="48" type="Sprite" parent="." index="65"]
-
+[node name="48" type="Sprite" parent="."]
 position = Vector2( 144, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="49" type="Sprite" parent="." index="66"]
-
+[node name="49" type="Sprite" parent="."]
 position = Vector2( 160, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="50" type="Sprite" parent="." index="67"]
-
+[node name="50" type="Sprite" parent="."]
 position = Vector2( 176, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="51" type="Sprite" parent="." index="68"]
-
+[node name="51" type="Sprite" parent="."]
 position = Vector2( 192, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="52" type="Sprite" parent="." index="69"]
-
+[node name="52" type="Sprite" parent="."]
 position = Vector2( 208, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="53" type="Sprite" parent="." index="70"]
-
+[node name="53" type="Sprite" parent="."]
 position = Vector2( 224, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="54" type="Sprite" parent="." index="71"]
-
+[node name="54" type="Sprite" parent="."]
 position = Vector2( 240, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="55" type="Sprite" parent="." index="72"]
-
+[node name="55" type="Sprite" parent="."]
 position = Vector2( 256, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="56" type="Sprite" parent="." index="73"]
-
+[node name="56" type="Sprite" parent="."]
 position = Vector2( 272, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="57" type="Sprite" parent="." index="74"]
-
+[node name="57" type="Sprite" parent="."]
 position = Vector2( 288, 48 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="58_fff8c0" type="Sprite" parent="." index="75"]
-
+[node name="58_fff8c0" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 0, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="58_84545c" type="Sprite" parent="." index="76"]
-
+[node name="58_84545c" type="Sprite" parent="."]
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 0, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="59" type="Sprite" parent="." index="77"]
-
+[node name="59" type="Sprite" parent="."]
 position = Vector2( 16, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="60" type="Sprite" parent="." index="78"]
-
+[node name="60" type="Sprite" parent="."]
 position = Vector2( 32, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="61" type="Sprite" parent="." index="79"]
-
+[node name="61" type="Sprite" parent="."]
 position = Vector2( 48, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="62" type="Sprite" parent="." index="80"]
-
+[node name="62" type="Sprite" parent="."]
 position = Vector2( 64, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="63" type="Sprite" parent="." index="81"]
-
+[node name="63" type="Sprite" parent="."]
 position = Vector2( 80, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="64" type="Sprite" parent="." index="82"]
-
+[node name="64" type="Sprite" parent="."]
 position = Vector2( 96, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="65" type="Sprite" parent="." index="83"]
-
+[node name="65" type="Sprite" parent="."]
 position = Vector2( 112, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="66" type="Sprite" parent="." index="84"]
-
+[node name="66" type="Sprite" parent="."]
 position = Vector2( 128, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="67" type="Sprite" parent="." index="85"]
-
+[node name="67" type="Sprite" parent="."]
 position = Vector2( 144, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="68" type="Sprite" parent="." index="86"]
-
+[node name="68" type="Sprite" parent="."]
 position = Vector2( 160, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="69" type="Sprite" parent="." index="87"]
-
+[node name="69" type="Sprite" parent="."]
 position = Vector2( 176, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="70" type="Sprite" parent="." index="88"]
-
+[node name="70" type="Sprite" parent="."]
 position = Vector2( 192, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="71" type="Sprite" parent="." index="89"]
-
+[node name="71" type="Sprite" parent="."]
 position = Vector2( 208, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="72" type="Sprite" parent="." index="90"]
-
+[node name="72" type="Sprite" parent="."]
 position = Vector2( 224, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="73" type="Sprite" parent="." index="91"]
-
+[node name="73" type="Sprite" parent="."]
 position = Vector2( 240, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="74" type="Sprite" parent="." index="92"]
-
+[node name="74" type="Sprite" parent="."]
 position = Vector2( 256, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="75" type="Sprite" parent="." index="93"]
-
+[node name="75" type="Sprite" parent="."]
 position = Vector2( 272, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="76" type="Sprite" parent="." index="94"]
-
+[node name="76" type="Sprite" parent="."]
 position = Vector2( 288, 72 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 96, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="77" type="Sprite" parent="." index="95"]
-
+[node name="77" type="Sprite" parent="."]
 position = Vector2( 0, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="78" type="Sprite" parent="." index="96"]
-
+[node name="78" type="Sprite" parent="."]
 position = Vector2( 16, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="79" type="Sprite" parent="." index="97"]
-
+[node name="79" type="Sprite" parent="."]
 position = Vector2( 32, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="80" type="Sprite" parent="." index="98"]
-
+[node name="80" type="Sprite" parent="."]
 position = Vector2( 48, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="81" type="Sprite" parent="." index="99"]
-
+[node name="81" type="Sprite" parent="."]
 position = Vector2( 64, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="82" type="Sprite" parent="." index="100"]
-
+[node name="82" type="Sprite" parent="."]
 position = Vector2( 80, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="83" type="Sprite" parent="." index="101"]
-
+[node name="83" type="Sprite" parent="."]
 position = Vector2( 96, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="84" type="Sprite" parent="." index="102"]
-
+[node name="84" type="Sprite" parent="."]
 position = Vector2( 112, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="85" type="Sprite" parent="." index="103"]
-
+[node name="85" type="Sprite" parent="."]
 position = Vector2( 128, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="86" type="Sprite" parent="." index="104"]
-
+[node name="86" type="Sprite" parent="."]
 position = Vector2( 144, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="87" type="Sprite" parent="." index="105"]
-
+[node name="87" type="Sprite" parent="."]
 position = Vector2( 160, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="88" type="Sprite" parent="." index="106"]
-
+[node name="88" type="Sprite" parent="."]
 position = Vector2( 176, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="89" type="Sprite" parent="." index="107"]
-
+[node name="89" type="Sprite" parent="."]
 position = Vector2( 192, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="90" type="Sprite" parent="." index="108"]
-
+[node name="90" type="Sprite" parent="."]
 position = Vector2( 208, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="91" type="Sprite" parent="." index="109"]
-
+[node name="91" type="Sprite" parent="."]
 position = Vector2( 224, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="92" type="Sprite" parent="." index="110"]
-
+[node name="92" type="Sprite" parent="."]
 position = Vector2( 240, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="93" type="Sprite" parent="." index="111"]
-
+[node name="93" type="Sprite" parent="."]
 position = Vector2( 256, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="94" type="Sprite" parent="." index="112"]
-
+[node name="94" type="Sprite" parent="."]
 position = Vector2( 272, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="95" type="Sprite" parent="." index="113"]
-
+[node name="95" type="Sprite" parent="."]
 position = Vector2( 288, 96 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="96" type="Sprite" parent="." index="114"]
-
+[node name="96" type="Sprite" parent="."]
 position = Vector2( 0, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="97" type="Sprite" parent="." index="115"]
-
+[node name="97" type="Sprite" parent="."]
 position = Vector2( 16, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="98" type="Sprite" parent="." index="116"]
-
+[node name="98" type="Sprite" parent="."]
 position = Vector2( 32, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="99" type="Sprite" parent="." index="117"]
-
+[node name="99" type="Sprite" parent="."]
 position = Vector2( 48, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="100" type="Sprite" parent="." index="118"]
-
+[node name="100" type="Sprite" parent="."]
 position = Vector2( 64, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="101" type="Sprite" parent="." index="119"]
-
+[node name="101" type="Sprite" parent="."]
 position = Vector2( 80, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="102" type="Sprite" parent="." index="120"]
-
+[node name="102" type="Sprite" parent="."]
 position = Vector2( 96, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="103" type="Sprite" parent="." index="121"]
-
+[node name="103" type="Sprite" parent="."]
 position = Vector2( 112, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="104" type="Sprite" parent="." index="122"]
-
+[node name="104" type="Sprite" parent="."]
 position = Vector2( 128, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="105" type="Sprite" parent="." index="123"]
-
+[node name="105" type="Sprite" parent="."]
 position = Vector2( 144, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="106" type="Sprite" parent="." index="124"]
-
+[node name="106" type="Sprite" parent="."]
 position = Vector2( 144, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="107" type="Sprite" parent="." index="125"]
-
+[node name="107" type="Sprite" parent="."]
 position = Vector2( 160, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="108" type="Sprite" parent="." index="126"]
-
+[node name="108" type="Sprite" parent="."]
 position = Vector2( 176, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="109" type="Sprite" parent="." index="127"]
-
+[node name="109" type="Sprite" parent="."]
 position = Vector2( 192, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="110" type="Sprite" parent="." index="128"]
-
+[node name="110" type="Sprite" parent="."]
 position = Vector2( 208, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="111" type="Sprite" parent="." index="129"]
-
+[node name="111" type="Sprite" parent="."]
 position = Vector2( 224, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="112" type="Sprite" parent="." index="130"]
-
+[node name="112" type="Sprite" parent="."]
 position = Vector2( 240, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="113" type="Sprite" parent="." index="131"]
-
+[node name="113" type="Sprite" parent="."]
 position = Vector2( 256, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="114" type="Sprite" parent="." index="132"]
-
+[node name="114" type="Sprite" parent="."]
 position = Vector2( 272, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="115" type="Sprite" parent="." index="133"]
-
+[node name="115" type="Sprite" parent="."]
 position = Vector2( 288, 120 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 144, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="116" type="Sprite" parent="." index="134"]
-
+[node name="116" type="Sprite" parent="."]
 position = Vector2( 0, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="117" type="Sprite" parent="." index="135"]
-
+[node name="117" type="Sprite" parent="."]
 position = Vector2( 16, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="118" type="Sprite" parent="." index="136"]
-
+[node name="118" type="Sprite" parent="."]
 position = Vector2( 32, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="119" type="Sprite" parent="." index="137"]
-
+[node name="119" type="Sprite" parent="."]
 position = Vector2( 48, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="120" type="Sprite" parent="." index="138"]
-
+[node name="120" type="Sprite" parent="."]
 position = Vector2( 64, 144.407 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="121" type="Sprite" parent="." index="139"]
-
+[node name="121" type="Sprite" parent="."]
 position = Vector2( 80, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="122" type="Sprite" parent="." index="140"]
-
+[node name="122" type="Sprite" parent="."]
 position = Vector2( 96, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="123" type="Sprite" parent="." index="141"]
-
+[node name="123" type="Sprite" parent="."]
 position = Vector2( 112, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="124" type="Sprite" parent="." index="142"]
-
+[node name="124" type="Sprite" parent="."]
 position = Vector2( 128, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="125" type="Sprite" parent="." index="143"]
-
+[node name="125" type="Sprite" parent="."]
 position = Vector2( 144, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="126" type="Sprite" parent="." index="144"]
-
+[node name="126" type="Sprite" parent="."]
 position = Vector2( 160, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="127" type="Sprite" parent="." index="145"]
-
+[node name="127" type="Sprite" parent="."]
 position = Vector2( 176, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="128" type="Sprite" parent="." index="146"]
-
+[node name="128" type="Sprite" parent="."]
 position = Vector2( 192, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="129" type="Sprite" parent="." index="147"]
-
+[node name="129" type="Sprite" parent="."]
 position = Vector2( 208, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="130" type="Sprite" parent="." index="148"]
-
+[node name="130" type="Sprite" parent="."]
 position = Vector2( 224, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="131" type="Sprite" parent="." index="149"]
-
+[node name="131" type="Sprite" parent="."]
 position = Vector2( 240, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="132" type="Sprite" parent="." index="150"]
-
+[node name="132" type="Sprite" parent="."]
 position = Vector2( 256, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="133" type="Sprite" parent="." index="151"]
-
+[node name="133" type="Sprite" parent="."]
 position = Vector2( 272, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="134" type="Sprite" parent="." index="152"]
-
+[node name="134" type="Sprite" parent="."]
 position = Vector2( 288, 144 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 192, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="135" type="Sprite" parent="." index="153"]
-
+[node name="135" type="Sprite" parent="."]
 position = Vector2( 0, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="136" type="Sprite" parent="." index="154"]
-
+[node name="136" type="Sprite" parent="."]
 position = Vector2( 16, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 16, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="137" type="Sprite" parent="." index="155"]
-
+[node name="137" type="Sprite" parent="."]
 position = Vector2( 32, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 32, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="138" type="Sprite" parent="." index="156"]
-
+[node name="138" type="Sprite" parent="."]
 position = Vector2( 48, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="139" type="Sprite" parent="." index="157"]
-
+[node name="139" type="Sprite" parent="."]
 position = Vector2( 64, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="140" type="Sprite" parent="." index="158"]
-
+[node name="140" type="Sprite" parent="."]
 position = Vector2( 80, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="141" type="Sprite" parent="." index="159"]
-
+[node name="141" type="Sprite" parent="."]
 position = Vector2( 96, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="142" type="Sprite" parent="." index="160"]
-
+[node name="142" type="Sprite" parent="."]
 position = Vector2( 112, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 112, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="143" type="Sprite" parent="." index="161"]
-
+[node name="143" type="Sprite" parent="."]
 position = Vector2( 128, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 128, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="144" type="Sprite" parent="." index="162"]
-
+[node name="144" type="Sprite" parent="."]
 position = Vector2( 144, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="145" type="Sprite" parent="." index="163"]
-
+[node name="145" type="Sprite" parent="."]
 position = Vector2( 160.597, 166.806 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="146" type="Sprite" parent="." index="164"]
-
+[node name="146" type="Sprite" parent="."]
 position = Vector2( 176, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="147" type="Sprite" parent="." index="165"]
-
+[node name="147" type="Sprite" parent="."]
 position = Vector2( 192, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="148" type="Sprite" parent="." index="166"]
-
+[node name="148" type="Sprite" parent="."]
 position = Vector2( 208, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 208, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="149" type="Sprite" parent="." index="167"]
-
+[node name="149" type="Sprite" parent="."]
 position = Vector2( 224, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 224, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="150" type="Sprite" parent="." index="168"]
-
+[node name="150" type="Sprite" parent="."]
 position = Vector2( 240, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 240, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="151" type="Sprite" parent="." index="169"]
-
+[node name="151" type="Sprite" parent="."]
 position = Vector2( 256, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 256, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="152" type="Sprite" parent="." index="170"]
-
+[node name="152" type="Sprite" parent="."]
 position = Vector2( 272, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 272, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="153" type="Sprite" parent="." index="171"]
-
+[node name="153" type="Sprite" parent="."]
 position = Vector2( 288, 168 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 288, 216, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="154" type="Sprite" parent="." index="172"]
-
+[node name="154" type="Sprite" parent="."]
 position = Vector2( 0, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="155" type="Sprite" parent="." index="173"]
-
+[node name="155" type="Sprite" parent="."]
 position = Vector2( 16, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="156" type="Sprite" parent="." index="174"]
-
+[node name="156" type="Sprite" parent="."]
 position = Vector2( 32, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="157" type="Sprite" parent="." index="175"]
-
+[node name="157" type="Sprite" parent="."]
 position = Vector2( 48, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="158" type="Sprite" parent="." index="176"]
-
+[node name="158" type="Sprite" parent="."]
 position = Vector2( 64, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 144, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="159" type="Sprite" parent="." index="177"]
-
+[node name="159" type="Sprite" parent="."]
 position = Vector2( 80, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 160, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="160" type="Sprite" parent="." index="178"]
-
+[node name="160" type="Sprite" parent="."]
 position = Vector2( 96, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 176, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="161" type="Sprite" parent="." index="179"]
-
+[node name="161" type="Sprite" parent="."]
 position = Vector2( 112, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 192, 240, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
 
-[node name="162" type="Sprite" parent="." index="180"]
-
+[node name="162" type="Sprite" parent="."]
 position = Vector2( 128, 192 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 64, 48, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform" ]
-
 
