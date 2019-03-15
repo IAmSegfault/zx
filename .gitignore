@@ -8,6 +8,6 @@ export_presets.cfg
 
 # Mono-specific ignores
 .mono/
-
+mono_crash.*
 # System/tool-specific ignores
 .directory

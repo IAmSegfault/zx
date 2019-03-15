@@ -53,9 +53,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\characterstatsblock.cs" />
     <Compile Include="scripts\gamespace\map\GameMap.cs" />
-    <Compile Include="scripts\kernel\Ecs.cs" />
+    <Compile Include="scripts\lib\ecs\Ecs.cs" />
     <Compile Include="scripts\lib\Processor.cs" />
-    <Compile Include="scripts\kernel\gwk.cs" />
     <Compile Include="scripts\ui\UiLog.cs" />
     <Compile Include="scripts\lib\RogueSharp\Cell.cs" />
     <Compile Include="scripts\lib\RogueSharp\FieldOfView.cs" />

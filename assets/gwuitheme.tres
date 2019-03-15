@@ -4,26 +4,14 @@
 [ext_resource path="res://assets/FiraSans-Book.otf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
-
-hinting = 2
 font_path = "res://assets/FiraMono-Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-
 size = 24
-use_mipmaps = false
-use_filter = false
 font_data = SubResource( 1 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=3]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -34,25 +22,9 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=4]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -63,25 +35,9 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=5]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -92,25 +48,9 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=6]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -121,61 +61,16 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=7]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0, 0, 0, 1 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
 
 [sub_resource type="DynamicFont" id=8]
-
 size = 0
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 1 )
-_sections_unfolded = [ "Font" ]
 
 [sub_resource type="StyleBoxFlat" id=9]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -186,68 +81,18 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxEmpty" id=10]
 
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
-
 [sub_resource type="DynamicFont" id=11]
-
 size = 12
-use_mipmaps = false
-use_filter = false
 font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="StyleBoxFlat" id=12]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0, 0, 0.113725, 0 )
-draw_center = true
-border_width_left = 0
-border_width_top = 0
-border_width_right = 0
-border_width_bottom = 0
-border_color = Color( 0.8, 0.8, 0.8, 1 )
-border_blend = false
-corner_radius_top_left = 0
-corner_radius_top_right = 0
-corner_radius_bottom_right = 0
-corner_radius_bottom_left = 0
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
 
 [sub_resource type="StyleBoxFlat" id=13]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -259,24 +104,10 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 corner_detail = 4
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
 anti_aliasing = false
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
 
 [sub_resource type="StyleBoxFlat" id=14]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.13092, 0.13092, 0.234375, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -287,44 +118,17 @@ corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
 anti_aliasing = false
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius", "Shadow" ]
 
 [sub_resource type="ImageTexture" id=15]
 
-flags = 7
-storage = 0
-lossy_quality = 0.7
-flags = 7
-size = Vector2( 0, 0 )
-
 [sub_resource type="Gradient" id=16]
 
-offsets = PoolRealArray( 0, 1 )
-colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
-
 [sub_resource type="GradientTexture" id=17]
-
-flags = 4
 gradient = SubResource( 16 )
-width = 2048
 
 [sub_resource type="StyleBoxFlat" id=18]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -336,24 +140,9 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 corner_detail = 16
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=19]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -364,25 +153,9 @@ corner_radius_top_left = 16
 corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
-corner_detail = 8
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [sub_resource type="StyleBoxFlat" id=20]
-
-content_margin_left = -1.0
-content_margin_right = -1.0
-content_margin_top = -1.0
-content_margin_bottom = -1.0
 bg_color = Color( 0.0931702, 0.0931702, 0.277344, 1 )
-draw_center = true
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
@@ -394,18 +167,8 @@ corner_radius_top_right = 16
 corner_radius_bottom_right = 16
 corner_radius_bottom_left = 16
 corner_detail = 16
-expand_margin_left = 0.0
-expand_margin_right = 0.0
-expand_margin_top = 0.0
-expand_margin_bottom = 0.0
-shadow_color = Color( 0, 0, 0, 0.6 )
-shadow_size = 0
-anti_aliasing = true
-anti_aliasing_size = 1
-_sections_unfolded = [ "Border", "Border Width", "Corner Radius" ]
 
 [resource]
-
 Button/colors/font_color = Color( 1, 1, 1, 1 )
 Button/colors/font_color_disabled = Color( 0, 0, 0, 1 )
 Button/colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -796,5 +559,4 @@ WindowDialog/fonts/title_font = null
 WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = null
-_sections_unfolded = [ "Border", "Border Width", "Button/colors", "Button/fonts", "Button/styles", "CheckBox/colors", "CheckBox/styles", "Corner Radius", "Label/colors", "Label/constants", "Label/fonts", "Label/styles", "LineEdit/colors", "LineEdit/fonts", "Panel", "Panel/styles", "PanelContainer", "PanelContainer/styles", "PopupMenu", "PopupMenu/colors", "PopupMenu/fonts", "PopupMenu/styles", "PopupPanel", "RichTextLabel", "RichTextLabel/colors", "RichTextLabel/constants", "RichTextLabel/styles", "SpinBox/icons", "TabContainer", "TabContainer/styles", "Tabs/styles", "TextEdit/colors", "Tree/styles", "VBoxContainer", "VBoxContainer/constants", "VScrollBar", "VScrollBar/icons", "VScrollBar/styles", "VSeparator", "VSeparator/styles", "VSlider" ]
 

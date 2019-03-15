@@ -26,7 +26,7 @@ namespace Zona.Engine
             this.spriteH = spriteH;
             this.texture = texture;
             this.guid = guid;
-            this.SetName("KinematicActor." + guid);
+            this.SetName("KinematicActor_" + guid);
         }
         public override void _Ready()
         {
@@ -45,17 +45,15 @@ namespace Zona.Engine
             rect.Position = start;
             rect.Size = end;
             sprite.SetRegionRect(rect);
-            sprite.SetName("Sprite." + this.guid);
+            sprite.SetName("Sprite_" + this.guid);
 
             Position2D position2D = new Position2D();
             position2D.SetPosition(this.Position);
-            position2D.SetName("Position2D." + this.guid);
+            position2D.SetName("Position2D_" + this.guid);
             position2D.AddChild(sprite, true);
-
             this.AddChild(position2D, true);
-
             Tween tween = new Tween();
-            tween.SetName("Tween." + this.guid);
+            tween.SetName("Tween_" + this.guid);
             this.AddChild(tween, true);
         }
 
@@ -65,7 +63,7 @@ namespace Zona.Engine
             foreach(System.Object obj in arr)
             {
                 Node node = (Node)obj;
-                if(node.Name.StartsWith("Tween."))
+                if(node.Name.StartsWith("Tween"))
                 {
                     return (Tween)node;
                 }
@@ -79,11 +77,20 @@ namespace Zona.Engine
             foreach(System.Object obj in arr)
             {
                 Node node = (Node)obj;
-                if(node.Name.StartsWith("Position2D."))
+                if(node.Name.StartsWith("Position2D"))
                 {
                     Position2D position2D = (Position2D)node;
-                    Sprite sprite = (Sprite)position2D.GetChild(0);
-                    return sprite;
+                    GContainers.Array spriteArr = position2D.GetChildren();
+                    foreach(System.Object sobj in spriteArr)
+                    {
+                        Node snode = (Node)sobj;
+                        if(snode.Name.StartsWith("Sprite"))
+                        {
+                            Sprite sprite = (Sprite)snode;
+                            return sprite;
+                        }
+                    }
+                    
                 }
             }
             return null;
@@ -96,7 +103,7 @@ namespace Zona.Engine
             foreach(System.Object obj in arr)
             {
                 Node node = (Node)obj;
-                if(node.Name.StartsWith("Position2D."))
+                if(node.Name.StartsWith("Position2D"))
                 {
                     Position2D position2D = (Position2D)node;
                     return position2D;
@@ -138,11 +145,13 @@ namespace Zona.Engine
             {
                 this.loaded = true;
                 Position2D position2D = this.kinematicActor.getPosition2D();
-                var gm = (GameMap)GetNode("/root/scene/kernel/Ecs/gamespace/map/GameMap");
+                var gm = (GameMap)GetNode("/root/scene/gamespace/GameMap");
                 Vector2 v2 = new Vector2(x, y);
                 Vector2 pos = gm.MapToWorld(v2);
-                position2D.SetPosition(pos);
-                this.nodePaths.Add("/root/scene/kernel/Ecs/gamespace/map/GameMap/" + kinematicActor.Name);
+                //position2D.SetPosition(pos);
+                gm.FindNode(kinematicActor.Name);
+
+                this.nodePaths.Add("/root/scene/gamespace/GameMap/" + kinematicActor.Name);
             }
             
         }
@@ -150,9 +159,9 @@ namespace Zona.Engine
         {
             KinematicActor kinematicActor = new KinematicActor(x, y, spriteX, spriteY, spriteW, spriteH, texture, guid);
             this.kinematicActor = kinematicActor;
-            var gm = (GameMap)GetNode("/root/scene/kernel/Ecs/gamespace/map/GameMap");
+            var gm = (GameMap)GetNode("/root/scene/gamespace/GameMap");
 
-            gm.AddChild(this.kinematicActor, true);
+            gm.AddChild(kinematicActor, true);
         }
         public void moveTo(Vector2 target)
         {
@@ -164,7 +173,6 @@ namespace Zona.Engine
             Tween tween = this.kinematicActor.getTween();
             tween.InterpolateProperty(position2D, "position", -direction + pos, target, 0.2f, Tween.TransitionType.Back, Tween.EaseType.In);
             tween.Start();
-            //position2D.SetPosition(target);
         }
         
         public void setModulate(string hexcode)

@@ -6,7 +6,6 @@ namespace Zona.ECSEntity
 {
     public class Player : Entity
     {
-
         private Vector2 inputDirection()
         {
             int right = 0;
@@ -31,8 +30,11 @@ namespace Zona.ECSEntity
             }
             return new Vector2(right - left, down - up);
         }
+        
+        //TODO: Move this animation code to a mob entity, the player should be in the center of the map and not animated.
         public override void _Process(float delta)
         {
+
             Vector2 direction = inputDirection();
             if(direction.x == 0 && direction.y == 0)
             {
@@ -44,7 +46,7 @@ namespace Zona.ECSEntity
                 ActorSprite a = null;
                 foreach(EntityNode enode in nodes)
                 {
-                    if(enode.Name.StartsWith("ActorSprite."))
+                    if(enode.Name.StartsWith("ActorSprite"))
                     {
                         ActorSprite AS = (ActorSprite)enode;
                         a = AS;
@@ -63,7 +65,7 @@ namespace Zona.ECSEntity
 
                 Position2D pos2D = ka.getPosition2D();
                 Vector2 pos = pos2D.Position;
-                var gm = (GameMap)GetNode("/root/scene/kernel/Ecs/gamespace/map/GameMap");
+                var gm = (GameMap)GetNode("/root/scene/gamespace/GameMap");
                 Vector2 gPos = gm.WorldToMap(pos);
                 Vector2 newGPos = gPos + direction;
                 Vector2 newPos = gm.MapToWorld(newGPos);
