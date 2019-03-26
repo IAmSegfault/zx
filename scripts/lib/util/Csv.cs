@@ -26,16 +26,17 @@ namespace Zona
                 file.Open(filepath, 1);
                 string text = file.GetAsText();
                 file.Close();
-                text.Replace('\n', '\r');
-                string[] lines = text.Split(new char[] {'\r'}, StringSplitOptions.RemoveEmptyEntries);
+                //text.Replace('\n', '\r');
+                string[] lines = text.Split(new string[]  {"\r", "\r\n", "\n"}, StringSplitOptions.None);
                 int rows = lines.Length;
                 int cols = lines[0].Split(',').Length;
-
-                string[,] values = new string[rows - 1, cols];
+                string[,] values = new string[rows, cols];
+                // We skip the header row and set i to 1
                 for(int i = 1; i < rows; i++)
                 {
+
                     string[] row = lines[i].Split(',');
-                    for(int j = 0; j < cols; j++)
+                    for(int j = 0; j < row.Length; j++)
                     {
                         values[i,j] = row[j];
                     }

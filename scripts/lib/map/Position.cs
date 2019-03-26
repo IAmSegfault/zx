@@ -45,6 +45,14 @@ namespace Zona
                 this.chunkMapPosition = new ChunkMapPosition(cX, cY, cZ);
             }
             
+            public bool Equals(MapPosition other)
+            {
+                if(this.chunkMapPosition.x == other.chunkMapPosition.x && this.chunkMapPosition.y == other.chunkMapPosition.y && this.chunkMapPosition.z == other.chunkMapPosition.z && this.worldMapPosition.x == other.worldMapPosition.y)
+                {
+                    return false;
+                }
+                return true;
+            }
         }
     }
 }

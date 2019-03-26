@@ -121,6 +121,8 @@
     <Compile Include="scripts\lib\node\ActorSprite.cs" />
     <Compile Include="scripts\lib\ecs\components\Actor.cs" />
     <Compile Include="scripts\lib\ecs\processors\CTProcessor.cs" />
+    <Compile Include="scripts\lib\map\CP437Mapping.cs" />
+    <Compile Include="scripts\lib\map\KeyPoint.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

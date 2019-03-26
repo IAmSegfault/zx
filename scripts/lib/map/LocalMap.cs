@@ -10,34 +10,61 @@ namespace Zona
         public class LocalMap : Map
         {
             public bool dirty;
-            public Dictionary<Point, Vicinity> vicinities;
-            public List<Point> locales;
+            public Dictionary<int, Vicinity> vicinities;
+            public List<KeyPoint> locales;
             public int width;
             public int height;
             public CSVClass staticData;
-            public LocalMap(int width, int height)
+
+            public MapPosition mapPosition;
+            public LocalMap(int width, int height, MapPosition mapPosition)
             {
                 this.dirty = true;
                 this.width = width;
                 this.height = height;
-                this.vicinities = new Dictionary<Point, Vicinity>();
-                this.locales = new List<Point>();
+                this.mapPosition = mapPosition;
+                this.vicinities = new Dictionary<int, Vicinity>();
+                this.locales = new List<KeyPoint>();
                 this.Initialize(width, height);
                 foreach(Cell cell in this.GetAllCells())
                 {
                     this.SetCellProperties(cell.X, cell.Y, true, true, false);
                     Vicinity vicinity = new Vicinity(cell.X, cell.Y, VicinityType.Dirt);
-                    vicinities.Add(new Point(cell.X, cell.Y), vicinity);
-                    locales.Add(new Point(cell.X, cell.Y));
+                    vicinities.Add(new KeyPoint(cell.X, cell.Y).GetHashCode(), vicinity);
+                    locales.Add(new KeyPoint(cell.X, cell.Y));
                 }
             }
 
+            public LocalMap(int width, int height)
+            {
+                this.dirty = true;
+                this.width = width;
+                this.height = height;
+                this.vicinities = new Dictionary<int, Vicinity>();
+                this.locales = new List<KeyPoint>();
+                this.Initialize(width, height);
+                foreach(Cell cell in this.GetAllCells())
+                {
+                    this.SetCellProperties(cell.X, cell.Y, true, true, false);
+                    Vicinity vicinity = new Vicinity(cell.X, cell.Y, VicinityType.Dirt);
+                    vicinities.Add(new KeyPoint(cell.X, cell.Y).GetHashCode(), vicinity);
+                    locales.Add(new KeyPoint(cell.X, cell.Y));
+                }
+            }
+
+            public void setMapPosition(MapPosition mapPosition)
+            {
+                this.mapPosition = mapPosition;
+            }
             public void setVType(int x, int y, VicinityType type)
             {
-                if(vicinities.ContainsKey(new Point(x, y)))
+                KeyPoint kp = new KeyPoint(x, y);
+                int hc = kp.GetHashCode();
+                if(vicinities.ContainsKey(hc))
                 {
-                    Vicinity vicinity = vicinities[new Point(x, y)];
-                    vicinity.type = type;
+                    this.vicinities[hc].type = type;
+                    Cell cell = (Cell)this.GetCell(x, y);
+                    this.SetCellProperties(x, y, type.transparent, type.walkable, cell.IsExplored);
                     this.dirty = true;
                 }
             }

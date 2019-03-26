@@ -12,12 +12,10 @@ namespace Zona.ECSProcessor
     {
         public RenderProcessor()
         {
-
         }
 
         public void postInit(Ecs ecs)
         {
-            LocalMap map = ecs.loadedMaps[(int)NeighbourMapDirection.center];
         }
         public void process(Ecs ecs, float delta, params dynamic[] args)
         {
@@ -26,6 +24,7 @@ namespace Zona.ECSProcessor
                 if(args[1] == "local")
                 {
                     LocalMap map = ecs.loadedMaps[(int)NeighbourMapDirection.center];
+
                     if(map.dirty)
                     {
                         TileMap gameMap = (TileMap)GetNode("/root/scene/gamespace/GameMap");
@@ -50,60 +49,97 @@ namespace Zona.ECSProcessor
                         
                         foreach(Cell cell in map.GetAllCells())
                         {
-                            if(cell.IsInFov && !cell.IsExplored)
+                            if(cell.IsInFov)
                             {
                                 map.SetCellProperties(cell.X, cell.Y, cell.IsTransparent, cell.IsWalkable, true);
                             }
                         }
-
-                        foreach(Cell cell in map.GetAllCells())
+                        //NOTE: This is a hack to get the camera to display in the top left of the screen. 
+                        //Consider setting this in the camera class instead??
+                        int x = 0;
+                        int y = 0;
+                        for(int i = viewPort.x; i < (viewPort.x + viewPort.w); i++)
                         {
-                            int x = cell.X - viewPort.x;
-                            int y = cell.Y - viewPort.y;
-
-                            if(cell.X >= viewPort.x && cell.X < w && cell.Y >= viewPort.y && cell.Y < h)
+                            for(int j = viewPort.y; j < (viewPort.y + viewPort.h); j++)
                             {
-                                Point p = new Point(cell.X, cell.Y);
-                                Point p2 = new Point(cell.X, cell.Y -1);
-                                Vicinity neighbour;
-                                bool hasNeighbour = false;
-                                if(cell.Y - 1 > 0)
+                                if(i < 0 || j < 0 || i > map.Width || j > map.Height)
                                 {
-                                    hasNeighbour = true;
-                                    neighbour = map.vicinities[p2];
+                                    gameMap.SetCell(x, y, -1);
                                 }
                                 else
                                 {
-                                    neighbour = map.vicinities[p];
-                                }
-                                Vicinity vicinity = map.vicinities[p];
-                                string tileID = vicinity.getValue();
-                                string tileColor = vicinity.getColor();
-                                if(hasNeighbour && neighbour.getValue() == vicinity.getValue())
-                                {
-                                    tileID = vicinity.getTerminalValue();
-                                }
-
-
-                                if(cell.IsExplored && cell.IsInFov)
-                                {
-                                    string tileName = tileID + "_" + tileColor;
-                                    int id = tileSet.FindTileByName(tileName);
-                                    gameMap.SetCell(cell.X, cell.Y, id);
-                                }
-                                else if(cell.IsExplored)
-                                {
-                                    string tileName = tileID + "_" + "2a2a3a";
-                                    int id = tileSet.FindTileByName(tileName);
-                                    gameMap.SetCell(cell.X, cell.Y, id);
+                                    KeyPoint p = new KeyPoint(i, j);
+                                    KeyPoint p2 = new KeyPoint(i, j -1);
+                                    KeyPoint p3 = new KeyPoint(i, j +1);
+                                    int hc1 = p.GetHashCode();
+                                    int hc2 = p2.GetHashCode();
+                                    int hc3 = p3.GetHashCode();
                                     
+                                    Vicinity topNeighbour;
+                                    Vicinity bottomNeighbour;
+                                    bool hasTopNeighbour = false;
+                                    bool hasBottomNeighbour = false;
+                                    if(j >= 1)
+                                    {
+                                        hasTopNeighbour = true;
+                                        topNeighbour = map.vicinities[hc2];
+                                    }
+                                    else
+                                    {
+                                        topNeighbour = map.vicinities[hc1];
+                                    }
+                                    if(j <= 126)
+                                    {
+                                        hasBottomNeighbour = true;
+                                        bottomNeighbour = map.vicinities[hc3];
+                                    }
+                                    else
+                                    {
+                                        bottomNeighbour = map.vicinities[hc1];
+                                    }
+
+                                    Vicinity vicinity = map.vicinities[hc1];
+                                    string tileID = vicinity.getValue();
+                                    string tileColor = vicinity.getColor();
+                                    if(hasTopNeighbour && topNeighbour.getValue() == vicinity.getValue() && !hasBottomNeighbour)
+                                    {   
+                                        tileID = vicinity.getTerminalValue();
+                                    }
+                                    else if(hasTopNeighbour && topNeighbour.getValue() == vicinity.getValue() && hasBottomNeighbour && bottomNeighbour.getValue() != vicinity.getValue())
+                                    {
+                                        tileID = vicinity.getTerminalValue();
+                                    }
+                                    else if (hasTopNeighbour && hasBottomNeighbour && topNeighbour.getValue() != vicinity.getValue() && bottomNeighbour.getValue() != vicinity.getValue())
+                                    {
+                                        tileID = vicinity.getTerminalValue();
+                                    }
+                                    else
+                                    {
+                                        tileID = vicinity.getValue();
+                                    }
+                                    Cell cell = (Cell)map.GetCell(i, j);
+                                    if(cell.IsExplored && cell.IsInFov)
+                                    {
+                                        string tileName = tileID + "_" + tileColor;
+                                        int id = tileSet.FindTileByName(tileName);
+                                        gameMap.SetCell(x, y, id);
+                                    }
+                                    else if(cell.IsExplored)
+                                    {
+                                        string tileName = tileID + "_" + "2a2a3a";
+                                        int id = tileSet.FindTileByName(tileName);
+                                        gameMap.SetCell(x, y, id);
+                                        
+                                    }
+                                    else
+                                    {
+                                        gameMap.SetCell(x, y, -1);
+                                    }
                                 }
-                                else
-                                {
-                                    gameMap.SetCell(cell.X, cell.Y, -1);
-                                }
-                                
+                                y += 1;
                             }
+                            x += 1;
+                            y = 0;
                         }
                     }
                 }
