@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="scripts\characterstatsblock.cs" />
+    <Compile Include="scripts\gamespace\actions\PlayerMove.cs" />
     <Compile Include="scripts\gamespace\map\GameMap.cs" />
     <Compile Include="scripts\lib\ecs\Ecs.cs" />
     <Compile Include="scripts\lib\Processor.cs" />
@@ -123,6 +124,8 @@
     <Compile Include="scripts\lib\ecs\processors\CTProcessor.cs" />
     <Compile Include="scripts\lib\map\CP437Mapping.cs" />
     <Compile Include="scripts\lib\map\KeyPoint.cs" />
+    <Compile Include="scripts\lib\ecs\processors\ActionProcessor.cs" />
+    <Compile Include="scripts\gamespace\actions\Action.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

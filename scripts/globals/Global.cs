@@ -17,6 +17,17 @@ namespace Zona.Engine
         {
             this.initList = new List<string>();
             this.enitityCtr = 0;
+            Directory directory = new Directory();
+            File f = new File();
+            if(!f.FileExists("user://actionmap.json"))
+            {
+                f.Open("res://data/directive/actionmap.json", 1);
+                string json = f.GetAsText();
+                f.Close();
+                f.Open("user://actionmap.json", 7);
+                f.StoreString(json);
+                f.Close();
+            }
         }
         
         public override void _Input(InputEvent @event)

@@ -1,0 +1,8 @@
+{
+    "actions":["player_move_west", "player_move_east", "player_move_north",
+               "player_move_south", "player_move_northwest", "player_move_northeast", 
+               "player_move_southwest", "player_move_southeast", "player_wait"],
+    "mapping_override":{
+
+    }
+}

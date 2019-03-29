@@ -3,35 +3,28 @@
 [ext_resource path="res://assets/oryx_roguelike_2.0/Monsters.png" type="Texture" id=1]
 [ext_resource path="res://assets/oryx_roguelike_2.0/Monsters_Scifi.png" type="Texture" id=2]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
-[node name="mentat" type="Sprite" parent="." index="0"]
-
+[node name="mentat" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 80, 24, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="enforcer" type="Sprite" parent="." index="1"]
-
+[node name="enforcer" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 16, 0 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 48, 120, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
 
-[node name="ranger" type="Sprite" parent="." index="2"]
-
+[node name="ranger" type="Sprite" parent="."]
 modulate = Color( 1, 0.972549, 0.752941, 1 )
 position = Vector2( 32, 0 )
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 96, 72, 16, 24 )
-_sections_unfolded = [ "Offset", "Region", "Transform", "Visibility" ]
-
 

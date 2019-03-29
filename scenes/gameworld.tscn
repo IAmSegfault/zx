@@ -1,22 +1,23 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://assets/bgatlas.tres" type="TileSet" id=1]
 [ext_resource path="res://scripts/gamespace/map/GameMap.cs" type="Script" id=2]
 [ext_resource path="res://assets/actoratlas.tres" type="TileSet" id=3]
 [ext_resource path="res://scripts/lib/ecs/Ecs.cs" type="Script" id=4]
-[ext_resource path="res://scripts/logpanel.gd" type="Script" id=5]
-[ext_resource path="res://assets/uipanel.tres" type="TileSet" id=6]
-[ext_resource path="res://assets/FiraMono-Regular.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://assets/gwuitheme.tres" type="Theme" id=8]
-[ext_resource path="res://scripts/ui/UiLog.cs" type="Script" id=9]
-[ext_resource path="res://scripts/gamepanel.gd" type="Script" id=10]
-[ext_resource path="res://assets/wmatlas.tres" type="TileSet" id=11]
-[ext_resource path="res://scripts/characterstatsblock.cs" type="Script" id=12]
-[ext_resource path="res://assets/white.png" type="Texture" id=13]
-[ext_resource path="res://assets/color_bleed.shader" type="Shader" id=14]
-[ext_resource path="res://assets/fog.shader" type="Shader" id=15]
-[ext_resource path="res://assets/grain2.png" type="Texture" id=16]
-[ext_resource path="res://assets/dt5.png" type="Texture" id=17]
+[ext_resource path="res://scripts/gamespace/actions/PlayerMove.cs" type="Script" id=5]
+[ext_resource path="res://scripts/logpanel.gd" type="Script" id=6]
+[ext_resource path="res://assets/uipanel.tres" type="TileSet" id=7]
+[ext_resource path="res://assets/FiraMono-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://assets/gwuitheme.tres" type="Theme" id=9]
+[ext_resource path="res://scripts/ui/UiLog.cs" type="Script" id=10]
+[ext_resource path="res://scripts/gamepanel.gd" type="Script" id=11]
+[ext_resource path="res://assets/wmatlas.tres" type="TileSet" id=12]
+[ext_resource path="res://scripts/characterstatsblock.cs" type="Script" id=13]
+[ext_resource path="res://assets/white.png" type="Texture" id=14]
+[ext_resource path="res://assets/color_bleed.shader" type="Shader" id=15]
+[ext_resource path="res://assets/fog.shader" type="Shader" id=16]
+[ext_resource path="res://assets/grain2.png" type="Texture" id=17]
+[ext_resource path="res://assets/dt5.png" type="Texture" id=18]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -24,11 +25,11 @@
 
 [sub_resource type="DynamicFont" id=3]
 size = 8
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 12
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
@@ -38,13 +39,13 @@ font_data = ExtResource( 7 )
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=8]
 size = 12
 use_mipmaps = true
 use_filter = true
-font_data = ExtResource( 7 )
+font_data = ExtResource( 8 )
 
 [sub_resource type="Shader" id=9]
 code = "shader_type canvas_item;
@@ -107,7 +108,7 @@ shader = SubResource( 11 )
 shader_param/BarrelPower = 1.1
 
 [sub_resource type="ShaderMaterial" id=13]
-shader = ExtResource( 14 )
+shader = ExtResource( 15 )
 shader_param/screen_width = 1280.0
 shader_param/screen_height = 720.0
 shader_param/BarrelPower = 1.1
@@ -120,15 +121,17 @@ shader_param/scanline_alpha = 0.9
 shader_param/lines_velocity = 30.0
 
 [sub_resource type="ShaderMaterial" id=14]
-shader = ExtResource( 15 )
+shader = ExtResource( 16 )
 shader_param/color = Vector3( 0.15, 0.15, 0.28 )
 shader_param/octaves = 8
 
 [node name="scene" type="Node"]
 
 [node name="gamespace" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="GameMap" type="TileMap" parent="gamespace"]
+editor/display_folded = true
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 24 )
 format = 1
@@ -144,6 +147,13 @@ tile_data = PoolIntArray( 786462, 2, 0 )
 [node name="Ecs" type="Node" parent="gamespace"]
 script = ExtResource( 4 )
 
+[node name="actions" type="Node" parent="gamespace"]
+
+[node name="PlayerWait" type="Node" parent="gamespace/actions"]
+
+[node name="PlayerMove" type="Node" parent="gamespace/actions"]
+script = ExtResource( 5 )
+
 [node name="ui" type="Node" parent="."]
 
 [node name="uicontainer" type="Container" parent="ui"]
@@ -155,10 +165,10 @@ margin_top = 600.0
 margin_right = 954.0
 margin_bottom = 720.0
 custom_styles/panel = SubResource( 1 )
-script = ExtResource( 5 )
+script = ExtResource( 6 )
 
 [node name="logborder" type="TileMap" parent="ui/uicontainer/logpanel"]
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 24 )
 format = 1
 tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 4, 0, 28, 4, 0, 29, 4, 0, 30, 4, 0, 31, 4, 0, 32, 4, 0, 33, 4, 0, 34, 4, 0, 35, 4, 0, 36, 4, 0, 37, 4, 0, 38, 4, 0, 39, 4, 0, 40, 4, 0, 41, 4, 0, 42, 4, 0, 43, 4, 0, 44, 4, 0, 45, 4, 0, 46, 4, 0, 47, 4, 0, 48, 4, 0, 49, 4, 0, 50, 4, 0, 51, 4, 0, 52, 4, 0, 53, 4, 0, 54, 4, 0, 55, 4, 0, 56, 4, 0, 57, 4, 0, 58, 4, 0, 59, 1, 0, 65595, 5, 0, 131131, 5, 0, 196667, 5, 0, 262203, 5, 0 )
@@ -179,21 +189,21 @@ margin_left = 16.0
 margin_top = 28.0
 margin_right = 933.0
 margin_bottom = 116.0
-theme = ExtResource( 8 )
+theme = ExtResource( 9 )
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 scroll_following = true
-script = ExtResource( 9 )
+script = ExtResource( 10 )
 
 [node name="gamepanel" type="Panel" parent="ui/uicontainer"]
 margin_left = 960.0
 margin_right = 1280.0
 margin_bottom = 720.0
 custom_styles/panel = SubResource( 5 )
-script = ExtResource( 10 )
+script = ExtResource( 11 )
 
 [node name="gameborder" type="TileMap" parent="ui/uicontainer/gamepanel"]
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 24 )
 format = 1
 tile_data = PoolIntArray( 0, 0, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 65536, 5, 0, 131072, 5, 0, 196608, 5, 0, 262144, 5, 0, 327680, 5, 0, 393216, 5, 0, 458752, 5, 0, 524288, 5, 0, 589824, 5, 0, 655360, 5, 0, 720896, 5, 0, 786432, 5, 0, 851968, 5, 0, 917504, 5, 0, 983040, 5, 0, 1048576, 5, 0, 1114112, 5, 0, 1179648, 5, 0, 1245184, 5, 0, 1310720, 5, 0, 1376256, 5, 0, 1441792, 5, 0, 1507328, 5, 0, 1572864, 5, 0, 1638400, 5, 0, 1703936, 5, 0, 1769472, 5, 0, 1835008, 5, 0, 1900544, 5, 0 )
@@ -205,7 +215,7 @@ margin_right = 320.0
 margin_bottom = 720.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource( 8 )
+theme = ExtResource( 9 )
 custom_styles/panel = SubResource( 6 )
 tab_align = 0
 
@@ -217,13 +227,13 @@ tab_align = 0
 tab_close_display_policy = 1
 
 [node name="MiniMap" type="TileMap" parent="ui/uicontainer/gamepanel/gamepaneltabs/Zone"]
-tile_set = ExtResource( 11 )
+tile_set = ExtResource( 12 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 2031618, 9, 0, 2031619, 1, 0, 2031620, 1, 0, 2031621, 1, 0, 2031622, 1, 0, 2031623, 1, 0, 2031624, 1, 0, 2031625, 1, 0, 2031626, 1, 0, 2031627, 1, 0, 2031628, 3, 0, 2031629, 3, 0, 2031630, 3, 0, 2031631, 3, 0, 2031632, 3, 0, 2097154, 9, 0, 2097155, 1, 0, 2097156, 1, 0, 2097157, 1, 0, 2097158, 1, 0, 2097159, 1, 0, 2097160, 1, 0, 2097161, 1, 0, 2097162, 1, 0, 2097163, 1, 0, 2097164, 3, 0, 2097165, 3, 0, 2097166, 4, 0, 2097167, 3, 0, 2097168, 3, 0, 2162690, 9, 0, 2162691, 1, 0, 2162692, 1, 0, 2162693, 8, 0, 2162694, 1, 0, 2162695, 1, 0, 2162696, 1, 0, 2162697, 1, 0, 2162698, 1, 0, 2162699, 1, 0, 2162700, 1, 0, 2162701, 3, 0, 2162702, 2, 0, 2162703, 3, 0, 2162704, 3, 0, 2228226, 9, 0, 2228227, 1, 0, 2228228, 1, 0, 2228229, 1, 0, 2228230, 1, 0, 2228231, 1, 0, 2228232, 1, 0, 2228233, 1, 0, 2228234, 1, 0, 2228235, 1, 0, 2228236, 2, 0, 2228237, 2, 0, 2228238, 2, 0, 2228239, 2, 0, 2228240, 3, 0, 2293762, 9, 0, 2293763, 1, 0, 2293764, 1, 0, 2293765, 1, 0, 2293766, 1, 0, 2293767, 1, 0, 2293768, 1, 0, 2293769, 6, 0, 2293770, 1, 0, 2293771, 1, 0, 2293772, 2, 0, 2293773, 7, 0, 2293774, 2, 0, 2293775, 2, 0, 2293776, 1, 0, 2359298, 9, 0, 2359299, 1, 0, 2359300, 1, 0, 2359301, 1, 0, 2359302, 1, 0, 2359303, 1, 0, 2359304, 1, 0, 2359305, 1, 0, 2359306, 1, 0, 2359307, 1, 0, 2359308, 1, 0, 2359309, 1, 0, 2359310, 1, 0, 2359311, 1, 0, 2359312, 1, 0, 2424834, 9, 0, 2424835, 0, 0, 2424836, 1, 0, 2424837, 1, 0, 2424838, 1, 0, 2424839, 5, 0, 2424840, 5, 0, 2424841, 5, 0, 2424842, 1, 0, 2424843, 1, 0, 2424844, 5, 0, 2424845, 5, 0, 2424846, 5, 0, 2424847, 5, 0, 2424848, 5, 0, 2490370, 9, 0, 2490371, 0, 0, 2490372, 0, 0, 2490373, 1, 0, 2490374, 1, 0, 2490375, 1, 0, 2490376, 5, 0, 2490377, 5, 0, 2490378, 5, 0, 2490379, 5, 0, 2490380, 5, 0, 2490381, 5, 0, 2490382, 5, 0, 2490383, 5, 0, 2490384, 5, 0, 2555906, 9, 0, 2555907, 0, 0, 2555908, 0, 0, 2555909, 0, 0, 2555910, 1, 0, 2555911, 1, 0, 2555912, 5, 0, 2555913, 5, 0, 2555914, 5, 0, 2555915, 5, 0, 2555916, 5, 0, 2555917, 5, 0, 2555918, 5, 0, 2555919, 5, 0, 2555920, 5, 0, 2621442, 9, 0, 2621443, 0, 0, 2621444, 0, 0, 2621445, 0, 0, 2621446, 1, 0, 2621447, 1, 0, 2621448, 5, 0, 2621449, 5, 0, 2621450, 5, 0, 2621451, 5, 0, 2621452, 5, 0, 2621453, 5, 0, 2621454, 5, 0, 2621455, 5, 0, 2621456, 5, 0 )
 
 [node name="MiniMapBorder" type="TileMap" parent="ui/uicontainer/gamepanel/gamepaneltabs/Zone"]
-tile_set = ExtResource( 6 )
+tile_set = ExtResource( 7 )
 cell_size = Vector2( 16, 24 )
 format = 1
 tile_data = PoolIntArray( 1310721, 0, 0, 1310722, 4, 0, 1310723, 4, 0, 1310724, 4, 0, 1310725, 4, 0, 1310726, 4, 0, 1310727, 4, 0, 1310728, 4, 0, 1310729, 4, 0, 1310730, 4, 0, 1310731, 4, 0, 1310732, 4, 0, 1310733, 4, 0, 1310734, 4, 0, 1310735, 4, 0, 1310736, 4, 0, 1310737, 1, 0, 1376257, 5, 0, 1376273, 5, 0, 1441793, 5, 0, 1441809, 5, 0, 1507329, 5, 0, 1507345, 5, 0, 1572865, 5, 0, 1572881, 5, 0, 1638401, 5, 0, 1638417, 5, 0, 1703937, 5, 0, 1703953, 5, 0, 1769473, 2, 0, 1769474, 4, 0, 1769475, 4, 0, 1769476, 4, 0, 1769477, 4, 0, 1769478, 4, 0, 1769479, 4, 0, 1769480, 4, 0, 1769481, 4, 0, 1769482, 4, 0, 1769483, 4, 0, 1769484, 4, 0, 1769485, 4, 0, 1769486, 4, 0, 1769487, 4, 0, 1769488, 4, 0, 1769489, 3, 0 )
@@ -244,7 +254,7 @@ custom_fonts/normal_font = SubResource( 8 )
 custom_colors/default_color = Color( 0.689728, 0.689728, 0.757813, 1 )
 text = "test"
 scroll_active = false
-script = ExtResource( 12 )
+script = ExtResource( 13 )
 
 [node name="inventory" type="Tabs" parent="ui/uicontainer/gamepanel/gamepaneltabs"]
 visible = false
@@ -277,31 +287,31 @@ visible = false
 material = SubResource( 12 )
 margin_right = 1280.0
 margin_bottom = 720.0
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="ShaderFilter" type="Sprite" parent="."]
 material = SubResource( 13 )
 scale = Vector2( 15, 9.38 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="ShaderFog" type="Sprite" parent="."]
 material = SubResource( 14 )
 scale = Vector2( 15, 9.38 )
 z_index = -2
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 centered = false
 
 [node name="filmgrain" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.219608 )
 position = Vector2( 640, 0 )
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
 [node name="photo" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.219608 )
 position = Vector2( 700, 420 )
 z_index = -1
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [connection signal="tab_changed" from="ui/uicontainer/gamepanel/gamepaneltabs" to="ui/uicontainer/gamepanel/gamepaneltabs/Stats/characterstatsblock" method="_on_gamepaneltabs_tab_changed"]

@@ -1,4 +1,4 @@
 {
-    "processors": ["RenderProcessor", "CTProcessor"],
-    "priorities": [15, 0]
+    "processors": ["RenderProcessor", "CTProcessor", "ActionProcessor"],
+    "priorities": [15, 0, 1]
 }

@@ -95,7 +95,6 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
 
 [node name="8_d44e52" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0.831373, 0.305882, 0.321569, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
@@ -104,7 +103,6 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
 
 [node name="8_84545c" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0.517647, 0.329412, 0.360784, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
@@ -113,7 +111,6 @@ region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
 
 [node name="8_b27e56" type="Sprite" parent="."]
-visible = false
 modulate = Color( 0.698039, 0.494118, 0.337255, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
@@ -121,8 +118,8 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 112, 0, 16, 24 )
 
-[node name="8_2a2a3a" type="Sprite" parent="."]
-modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
+[node name="8_101024" type="Sprite" parent="."]
+modulate = Color( 0.0627451, 0.0627451, 0.141176, 1 )
 position = Vector2( 112, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -253,6 +250,14 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 24, 16, 24 )
 
+[node name="20_101024" type="Sprite" parent="."]
+modulate = Color( 0.0627451, 0.0627451, 0.141176, 1 )
+position = Vector2( 0, 24 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 24, 16, 24 )
+
 [node name="21" type="Sprite" parent="."]
 position = Vector2( 16, 24 )
 texture = ExtResource( 1 )
@@ -270,6 +275,14 @@ region_rect = Rect2( 16, 24, 16, 24 )
 
 [node name="21_b27e56" type="Sprite" parent="."]
 modulate = Color( 0.698039, 0.494118, 0.337255, 1 )
+position = Vector2( 16, 24 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 16, 24, 16, 24 )
+
+[node name="21_101024" type="Sprite" parent="."]
+modulate = Color( 0.0627451, 0.0627451, 0.141176, 1 )
 position = Vector2( 16, 24 )
 texture = ExtResource( 1 )
 centered = false
@@ -494,8 +507,8 @@ offset = Vector2( 0.23, 0 )
 region_enabled = true
 region_rect = Rect2( 128, 72, 16, 24 )
 
-[node name="47_2a2a3a" type="Sprite" parent="."]
-modulate = Color( 0.164706, 0.164706, 0.227451, 1 )
+[node name="47_101024" type="Sprite" parent="."]
+modulate = Color( 0.0627451, 0.0627451, 0.141176, 1 )
 position = Vector2( 128, 48 )
 texture = ExtResource( 1 )
 centered = false

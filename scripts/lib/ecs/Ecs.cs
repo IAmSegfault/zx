@@ -216,7 +216,7 @@ namespace Zona.Engine
         
             foreach(Entity entity in this.entities)
             {
-                if(entity.hasTag("player"))
+                if(entity.hasTag("Player"))
                 {
                     player = (Player)entity;
                     break;

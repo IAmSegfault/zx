@@ -25,6 +25,10 @@ namespace Zona.ECSProcessor
             else
             {
                 var gameMap = (GameMap)GetNode("/root/scene/gamespace/GameMap");
+                if(gameMap.state == "init")
+                {
+                    gameMap.state = "ct_await";
+                }
                 if(gameMap.state != "ct_await" && gameMap.state != "player_at" && gameMap.state != "npc_at")
                 {
                     this.cache.Clear();

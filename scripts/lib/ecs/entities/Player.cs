@@ -83,7 +83,7 @@ namespace Zona.ECSEntity
             int localMapY = Convert.ToInt32(args[6]); 
             int lightRadius = Convert.ToInt32(args[7]);
             int speed = Convert.ToInt32(args[8]);
-            this.addTag("player");
+            this.addTag("Player");
             this.addComponent(new WorldPosition(worldX, worldY, chunkX, chunkY, chunkZ, localMapX, localMapY));
             this.addComponent(new LightRadius(lightRadius));
             this.addComponent(new Actor(speed, true));

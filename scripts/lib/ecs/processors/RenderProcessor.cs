@@ -40,7 +40,7 @@ namespace Zona.ECSProcessor
                         int w = viewPort.x + viewPort.w;
                         int h = viewPort.y + viewPort.h;
                         List<string> playerTags = new List<string>();
-                        playerTags.Add("player");
+                        playerTags.Add("Player");
                         List<Entity> playerList = ecs.getEntities(playerTags);
                         Player player = (Player)playerList[0];
                         LightRadius lightRadius = player.getComponent<LightRadius>();
@@ -126,7 +126,7 @@ namespace Zona.ECSProcessor
                                     }
                                     else if(cell.IsExplored)
                                     {
-                                        string tileName = tileID + "_" + "2a2a3a";
+                                        string tileName = tileID + "_" + "101024";
                                         int id = tileSet.FindTileByName(tileName);
                                         gameMap.SetCell(x, y, id);
                                         
