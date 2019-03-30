@@ -62,7 +62,7 @@ namespace Zona.ECSProcessor
                         {
                             for(int j = viewPort.y; j < (viewPort.y + viewPort.h); j++)
                             {
-                                if(i < 0 || j < 0 || i > map.Width || j > map.Height)
+                                if(i < 0 || j < 0 || i > map.Width - 1 || j > map.Height - 1)
                                 {
                                     gameMap.SetCell(x, y, -1);
                                 }
@@ -82,6 +82,11 @@ namespace Zona.ECSProcessor
                                     if(j >= 1)
                                     {
                                         hasTopNeighbour = true;
+                                        if(!map.vicinities.ContainsKey(hc2))
+                                        {
+                                            GD.Print(p2.X);
+                                            GD.Print(p2.Y);
+                                        }
                                         topNeighbour = map.vicinities[hc2];
                                     }
                                     else
